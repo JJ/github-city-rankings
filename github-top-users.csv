@@ -1,0 +1,750 @@
+ , login, location, followers, contributions, contributionsStreak, contributionsCurrentStreak
+IonicaBizau, Romania, 150, 104283, 278, 3
+tlevine, http://gitorious.org/tlevine/, 132, 24388, 315, 25
+kentfredric, New Zealand, 292, 17639, 99, 0
+md-5, Melbourne, Australia, 349, 17055, 22, 0
+avsm, Cambridge, UK, 312, 14835, 32, 9
+kevinsawicki, Redwood City, CA, 1300, 11808, 19, 2
+michaelklishin, , 518, 6849, 543, 543
+sckott, Portland, OR, 184, 6513, 86, 31
+azu, Japan, 204, 6306, 392, 392
+substack, Oakland, California, USA, 5600, 6303, 119, 16
+DamonOehlman, Sydney, Australia, 169, 6132, 47, 2
+ornicar, France, 532, 5966, 44, 28
+twolfson, Chicago, IL, 114, 5861, 23, 0
+springmeyer, Winthrop, WA, 481, 5834, 26, 3
+perlancar, Jakarta, Indonesia, 121, 5832, 45, 8
+hadley, Houston, TX, 2400, 5682, 25, 9
+kinlane, United States, 159, 5393, 19, 7
+konklone, Washington, DC, 233, 5242, 47, 34
+rkh, Berlin, 1200, 5230, 182, 3
+rwjblue, Hope, RI, 197, 4903, 464, 464
+parkr, San Francisco, CA, 318, 4867, 99, 13
+mafintosh, Copenhagen, Denmark, 598, 4769, 275, 275
+mrmrs, San Francisco, 553, 4747, 13, 2
+thomasdavis, Brisbane, Australia, 732, 4692, 52, 3
+kanzure, Austin, Texas, 178, 4627, 4807, 4807
+addyosmani, London, England, 10000, 4615, 40, 30
+vito, San Francisco, CA, 128, 4550, 49, 3
+sahat, Sunnyvale, CA, 553, 4485, 448, 448
+stefanpenner, New York, New York, 436, 4391, 168, 9
+STRd6, Fillmore, CA, 330, 4333, 98, 0
+Ocramius, Germany, 685, 4238, 60, 0
+bevacqua, Buenos Aires, Argentina, 355, 4223, 112, 2
+kbroman, Madison, Wisconsin, USA, 142, 4153, 177, 177
+remy, Brighton, UK, 2700, 4101, 88, 6
+szabgab, Israel, 131, 4083, 57, 54
+tmcw, Washington, DC, 769, 4039, 35, 17
+dcramer, San Francisco, CA, 1100, 4019, 19, 3
+jonschlinkert, Cincinnati, OH, 215, 4019, 40, 25
+JJ, Granada, 106, 3938, 77, 19
+dominictarr, New Zealand, 1100, 3894, 33, 17
+feross, Mountain View, CA, 1400, 3806, 24, 0
+crcn, San Francisco, California, 129, 3790, 38, 3
+dumganhar, Xiamen, 122, 3742, 26, 2
+kaelzhang, Shanghai, China, 120, 3691, 60, 0
+snoyberg, Israel, 345, 3658, 39, 39
+mjhea0, San Francisco, 203, 3642, 72, 6
+cordoval, LV-233, 252, 3638, 21, 3
+ralphbean, Rochester, NY, 137, 3604, 59, 3
+c9s, , 805, 3592, 45, 4
+jamesward, , 576, 3591, 24, 2
+syohex, Osaka, Japan, 156, 3590, 170, 8
+thlorenz, New York ,NY, 259, 3568, 66, 15
+sqs, San Francisco, CA, 141, 3565, 34, 2
+Raynos, San Francisco, 619, 3563, 33, 2
+reem, San Francisco, CA, 148, 3513, 234, 234
+tcr, coast to coast, 165, 3498, 25, 0
+mathiasbynens, Belgium, 2100, 3497, 26, 2
+schacon, San Francisco, CA, 9900, 3409, 9, 0
+sferik, , 1500, 3374, 104, 6
+kevva, Sweden, 169, 3371, 117, 117
+ekmett, Cambridge, MA, 739, 3361, 30, 2
+indutny, Russia, 1000, 3301, 36, 2
+afeld, Brooklyn, NY, 294, 3286, 37, 10
+minrk, Berkeley, CA, 199, 3276, 173, 112
+kohsuke, San Jose, California, 661, 3194, 23, 0
+titanous, , 339, 3175, 361, 3
+ingydotnet, Seattle, 371, 3153, 92, 2
+FGRibreau, Nantes, France, 151, 3086, 303, 0
+samccone, 0.0.0.0, 127, 3008, 48, 0
+anubiann00b, Bellevue Washington, 135, 3005, 162, 2
+rstacruz, Manila, Philippines, 1400, 3002, 20, 0
+mattdesl, Toronto, 166, 2992, 26, 9
+creationix, Red Lick, TX, USA, 2600, 2960, 13, 2
+tobyink, Lewes, GB-ESX, 110, 2935, 20, 0
+BanzaiMan, Chapel Hill, NC, USA, 112, 2888, 34, 32
+MoOx, Toulouse, France, 139, 2883, 124, 3
+r7kamura, Tokyo, Japan, 353, 2881, 33, 0
+nolanlawson, NYC, 107, 2879, 59, 4
+maxogden, Oakland, CA, 2400, 2858, 48, 8
+gjtorikian, San Francisco, CA, 159, 2844, 29, 2
+dsyer, London, 168, 2839, 30, 30
+weilu, Singapore, 154, 2825, 46, 3
+vincentbernat, Lausanne, Switzerland, 153, 2797, 81, 77
+samoht, Cambridge, UK, 125, 2792, 26, 0
+mattn, Osaka, Japan, 1300, 2780, 11, 7
+calvinmetcalf, Boston, 192, 2765, 185, 3
+crosbymichael, San Francisco, 292, 2765, 47, 2
+ajlopez, Buenos Aires, 189, 2765, 634, 634
+alex, San Francisco, 1400, 2746, 57, 2
+paulcbetts, San Francisco, 588, 2739, 33, 3
+TooTallNate, San Francisco, CA, 1200, 2738, 35, 0
+yields, , 241, 2723, 27, 2
+dstufft, Philadelphia, PA, 184, 2698, 21, 4
+jmettraux, Hiroshima, 261, 2686, 510, 510
+bergie, Berlin, Germany, 463, 2675, 13, 0
+paultag, Boston, Massachusetts, 186, 2671, 27, 0
+toolness, Brooklyn, NY, 197, 2659, 22, 7
+tj, Victoria, BC, Canada, 12000, 2658, 43, 0
+PaulKinlan, Liverpool, London, Mountain View (CA), 516, 2651, 367, 367
+benbalter, Washington, DC, 2400, 2640, 21, 0
+orta, Manchester / NYC, 574, 2633, 45, 10
+till, Berlin, Germany, 108, 2611, 12, 2
+jbenet, Palo Alto, CA, 176, 2603, 32, 0
+k88hudson, , 107, 2584, 9, 9
+stof, Paris, 797, 2584, 18, 3
+grant, Bay Area, 160, 2573, 267, 0
+tokuhirom, Tokyo, Japan, 563, 2563, 34, 8
+balupton, Sydney, Australia, 667, 2557, 20, 3
+mpapis, Gorzow Wlkp., Poland, 167, 2557, 76, 76
+jwiegley, Peoria, Illinois, USA, 361, 2531, 41, 3
+mcollina, In the clouds above Italy, 374, 2508, 59, 2
+icco, London, UK, 114, 2506, 32, 0
+chrishunt, Portland, Oregon, 322, 2499, 160, 160
+andreypopp, Moscow, Russia, 277, 2494, 25, 2
+unixpickle, United States, 139, 2479, 273, 273
+fsouza, Rio de Janeiro, Brazil, 377, 2468, 19, 3
+lancejpollard, San Francisco, 288, 2465, 15, 0
+sbinet, , 110, 2449, 21, 2
+rdegges, Bay Area, 412, 2445, 11, 2
+michielbdejong, Berlin & elsewhere, 111, 2442, 16, 5
+zachlatta, San Francisco, 191, 2427, 276, 11
+mikolalysenko, Madison, WI, 366, 2394, 19, 0
+arunoda, Colombo, Sri Lanka, 388, 2390, 42, 4
+coolaj86, Provo, UT, 238, 2379, 27, 0
+contra, ✈, 665, 2350, 123, 3
+fengmk2, Hangzhou, China, 1400, 2323, 27, 2
+fgrehm, Salvador / Porto Alegre, Brazil, 244, 2273, 25, 3
+1000ch, Tokyo, Japan, 122, 2232, 101, 101
+eiel, Hiroshima, Japan, 262, 2230, 593, 593
+jeromeetienne, Paris, france, 530, 2198, 33, 0
+zeke, Oakland, CA, 234, 2190, 20, 3
+JuanitoFatas, Taipei, Taiwan, 268, 2190, 18, 0
+shokai, Kanagawa, Japan., 171, 2180, 42, 0
+medikoo, Warsaw, Poland, 178, 2165, 14, 0
+appleboy, Hsinchu of Taiwan, 289, 2160, 18, 11
+passy, London, UK, 581, 2154, 672, 672
+purcell, Chester, UK, 554, 2117, 51, 51
+autarch, Minneapolis, MN, 112, 2112, 15, 2
+freddix, , 576, 2102, 27, 0
+rpflorence, Salt Lake City, UT, 453, 2083, 14, 0
+mizzy, Kanagawa, Japan, 320, 2065, 23, 0
+mojavelinux, Lone Tree, CO, 188, 2047, 30, 2
+bakercp, Chicago, Illinois USA, 153, 2044, 55, 2
+blakeembrey, , 243, 2020, 13, 0
+MatthewMueller, San Francisco, CA, 433, 2013, 32, 3
+andrewrk, Phoenix, Arizona, 307, 1998, 23, 0
+robotlolita, Belo Horizonte, Brazil, 353, 1994, 35, 0
+miketaylr, Austin, TX, 293, 1984, 12, 0
+chergert, San Francisco, CA, 147, 1977, 47, 0
+ianstormtaylor, San Francisco, CA, 631, 1973, 19, 0
+JoshCheek, Denver, CO, 182, 1972, 23, 12
+ForbesLindesay, , 294, 1968, 26, 3
+ednapiranha, , 583, 1963, 25, 0
+jcasimir, Denver, CO, 277, 1960, 80, 5
+xuwei-k, tokyo, 247, 1954, 35, 3
+jaz303, Glasgow, Scotland, UK, 176, 1952, 233, 2
+ngocdaothanh, Japan, 117, 1942, 20, 2
+sethvincent, seattle, wa, 160, 1939, 17, 2
+dblock, New York, NY, 292, 1927, 32, 10
+btford, San Francisco, CA, 1700, 1921, 52, 2
+motdotla, Los Angeles, CA, 138, 1918, 31, 0
+peterbe, Mountain View, California, 168, 1916, 18, 3
+jaredly, Provo, UT, 102, 1899, 30, 6
+tenderlove, Seattle, 3700, 1892, 21, 2
+hsbt, Tokyo, Japan, 407, 1890, 22, 9
+HashNuke, Bangalore, India, 119, 1874, 40, 3
+EvanHahn, the ether, 116, 1856, 15, 3
+tilgovi, San Francisco, CA, 183, 1850, 19, 3
+awatson1978, New York City - Boston - Chicago - Evansville, 153, 1826, 16, 0
+audreyt, Taipei, Taiwan, 878, 1805, 20, 2
+skeeto, Columbia, MD, 184, 1799, 32, 8
+isaacs, Oakland CA, 3700, 1798, 28, 8
+lestrrat, Tokyo, Japan, 316, 1796, 45, 2
+Snugug, New York, 289, 1791, 16, 0
+kana, Tokyo, Japan, 467, 1783, 304, 304
+avelino, Brazil - Sao Paulo / SP, 511, 1782, 13, 11
+jezdez, Berlin, Europe, 1200, 1778, 24, 2
+hoelzro, Chicago, IL, 104, 1773, 95, 0
+steveklabnik, Brooklyn, 1900, 1771, 69, 0
+arthurnn, Ottawa, 240, 1762, 201, 16
+philips, San Francisco, CA, 308, 1756, 73, 5
+gskielian, , 130, 1751, 23, 0
+rvagg, South Coast NSW, Australia, 710, 1745, 20, 0
+mjackson, California, 263, 1744, 13, 3
+tmpvar, Roaming, 525, 1743, 77, 0
+dickeyxxx, Los Angeles, California, 159, 1742, 11, 3
+caitp, Toronto, Canada, 549, 1739, 47, 5
+andrewsmedina, Rio de Janeiro, 377, 1728, 113, 2
+neonichu, Berlin, Germany, 111, 1718, 35, 2
+hughsk, Sydney, AU ⇄ Amsterdam, NL, 256, 1709, 24, 0
+lepture, Everywhere, China, 1500, 1705, 23, 2
+robdodson, San Francisco, CA, 510, 1704, 23, 0
+clkao, Taipei, Taiwan, 341, 1690, 15, 0
+headius, , 647, 1685, 12, 2
+matsumoto-r, Osaka, Japan, 122, 1674, 47, 0
+dtao, San Francisco, 111, 1673, 13, 0
+bsingr, Karlsruhe, Germany, 109, 1662, 68, 0
+bebraw, Jyväskylä, Finland, 168, 1655, 18, 0
+doy, Providence, RI, 127, 1652, 36, 4
+rjbs, Bethlehem, PA, USA, 281, 1649, 24, 5
+grosser, San Francisco, CA, 252, 1643, 36, 0
+sorah, Tokyo, Japan, 402, 1641, 268, 268
+vladikoff, , 433, 1635, 315, 315
+certik, Los Alamos, NM, 114, 1634, 33, 2
+radar, Melbourne, Australia, 1000, 1626, 17, 0
+timoxley, Brisbane, AU ⇄ Singapore, 387, 1625, 22, 2
+juliangruber, Kaufbeuren, Germany, 479, 1614, 15, 4
+mmalecki, Amsterdam, Netherlands, 363, 1602, 18, 0
+tbranyen, Shapleigh, ME, 691, 1600, 16, 3
+shekhargulati, , 209, 1599, 51, 0
+drnic, Palo Alto, CA, USA, 1400, 1595, 20, 0
+turingou, Peking, Mainland China, 766, 1594, 91, 4
+dukex, Brazil, 107, 1563, 29, 0
+gre, Paris, France, 190, 1561, 50, 2
+dgryski, Amsterdam, The Netherlands, 209, 1560, 477, 477
+sole, London, 410, 1559, 128, 128
+ashfurrow, Amsterdam, 801, 1558, 27, 2
+dagolden, New York, NY, 178, 1556, 14, 0
+gdi2290, San Francisco, California, 259, 1545, 36, 9
+zmughal, Houston, Texas, United States of America, Earth, Galactic Sector ZZ9 Plural Z Alpha, 101, 1540, 520, 520
+brson, Mountain View, 149, 1539, 30, 2
+dfm, Brooklyn, NY, 397, 1538, 42, 0
+edsu, Silver Spring, MD, 277, 1537, 21, 3
+meh, Internet, 272, 1527, 37, 0
+jden, San Francisco / Internet, 230, 1524, 22, 0
+gr2m, Zurich, 122, 1522, 14, 0
+weavejester, London, UK, 509, 1514, 62, 0
+samth, Bloomington, IN, 105, 1513, 11, 9
+Kami, Ljubljana, Slovenia, 243, 1508, 49, 0
+defunkt, San Francisco, 13000, 1504, 5, 0
+jordansissel, Silicon Valley, 821, 1492, 12, 2
+mitsuhiko, United Kingdom / Austria, 4000, 1482, 19, 0
+pbrisbin, cambridge, ma, 163, 1481, 13, 0
+jalcine, New York City, 109, 1475, 14, 3
+erikvold, San Francisco, 144, 1457, 17, 0
+softprops, nyc, 176, 1446, 20, 7
+mgcrea, Paris, France, 363, 1443, 13, 0
+hotoo, Hangzhou, China, 459, 1426, 24, 0
+benoitc, Creil, France, 639, 1426, 21, 10
+rwaldron, Brooklyn, NY, 1100, 1425, 22, 3
+searls, Columbus, OH, 232, 1421, 21, 0
+ktoso, Kraków, Poland, 179, 1420, 19, 0
+jprichardson, Lincoln, Nebraska, 182, 1417, 33, 0
+vesln, Bulgaria, 124, 1410, 127, 0
+sdboyer, Detroit, MI, USA, 111, 1408, 103, 0
+faux123, Los Angeles, 422, 1405, 11, 0
+shykes, San Francisco, CA, 585, 1394, 16, 0
+alexgorbatchev, San Francisco, CA, 323, 1389, 11, 0
+davecheney, Sydney, Australia, 514, 1387, 13, 0
+yuvipanda, Chennai, 332, 1381, 19, 0
+sosedoff, Chicago, IL, 131, 1377, 42, 2
+HenrikJoreteg, West Richland, WA, 531, 1367, 12, 2
+jedisct1, San Francisco, CA., 297, 1364, 48, 4
+alanshaw, London, 109, 1351, 19, 0
+latentflip, Edinburgh, 201, 1346, 12, 2
+travisjeffery, 36 chambers, slums of shaolin, 249, 1345, 22, 2
+coderanger, Lafayette, CA, USA, 188, 1344, 12, 0
+jugglinmike, , 124, 1341, 12, 2
+hemanth, India, 219, 1340, 247, 26
+popomore, Hangzhou China, 200, 1331, 18, 0
+briancavalier, Pivotal, cujoJS, RaveJS, 249, 1329, 33, 2
+jackfranklin, London, 269, 1326, 31, 0
+glebm, just moved to London, 133, 1321, 25, 0
+azer, Oakland, 342, 1317, 16, 3
+retronym, Brisbane, Australia, 207, 1314, 23, 0
+koron, Tokyo, Japan, 135, 1298, 17, 0
+rtyler, San Francisco, CA, 234, 1289, 17, 4
+henrik, Stockholm, Sweden, 187, 1271, 22, 0
+heynemann, Rio de Janeiro, RJ, Brazil, 367, 1265, 15, 0
+defunctzombie, NYC, 391, 1260, 23, 2
+jwerle, NYC, 149, 1240, 17, 0
+splitbrain, Berlin, Germany, 181, 1237, 24, 2
+devongovett, San Luis Obispo, CA, 246, 1234, 14, 0
+colinta, Denver, CO, 153, 1230, 11, 0
+tjwudi, Shanghai, China, 195, 1215, 66, 0
+kristianmandrup, Greek islands, 141, 1211, 27, 27
+alloy, Amsterdam, the Netherlands, 503, 1211, 16, 0
+garethr, Cambridge, 424, 1206, 15, 2
+godfat, Taiwan, 132, 1204, 9, 5
+kelseyhightower, Portland, OR, 246, 1202, 11, 8
+financeCoding, San Francisco, CA, 145, 1191, 96, 0
+kmike, Russia, Ekaterinburg, 240, 1189, 18, 2
+ocharles, London, 193, 1182, 23, 2
+jiyinyiyong, Shanghai, China, 292, 1181, 35, 0
+vicb, Grenoble, France, 134, 1180, 55, 2
+ametaireau, Rennes, France, 226, 1175, 10, 0
+atmos, Potrero, SF, 829, 1169, 11, 0
+schneems, Austin, Tx, 582, 1169, 11, 0
+tagomoris, Tokyo, 213, 1168, 10, 0
+sethladd, Mountain View, CA, 342, 1156, 27, 0
+sunaku, , 116, 1153, 13, 3
+thoughtpolice, Austin, TX, 135, 1150, 15, 0
+nicferrier, sussex, england, uk, 186, 1149, 26, 0
+hanachin, Naha/Okinawa, 132, 1126, 13, 0
+wilmoore, Colorado, 107, 1123, 10, 0
+hellais, Internetz, 128, 1119, 7, 0
+BinaryMuse, San Francisco, CA, 134, 1115, 12, 0
+vojtajina, San Francisco Bay Area, 866, 1113, 24, 0
+svenfuchs, Germany/Berlin, 497, 1111, 21, 0
+gmr, Philadelphia, PA, 118, 1102, 10, 2
+shama, Portland, OR, 410, 1101, 15, 3
+michaelficarra, Sunnyvale, CA, 365, 1089, 52, 0
+paulproteus, San Francisco, CA, 123, 1088, 5, 0
+mattrobenolt, San Francisco, CA, 148, 1084, 21, 2
+theory, Portland, OR, USA, 190, 1080, 13, 0
+tarruda, Recife/Brasil, 230, 1078, 18, 2
+bobtfish, London, 242, 1077, 80, 0
+aredridel, Cambridge, MA, 168, 1069, 13, 8
+jrburke, , 1300, 1068, 13, 0
+pborreli, Oujda, Morocco, 198, 1065, 15, 0
+code4craft, Shanghai, China, 356, 1063, 138, 0
+schwern, Portland, OR, 268, 1061, 13, 0
+jaredhanson, Oakland, CA, 660, 1061, 12, 0
+siuying, Hong Kong, 227, 1059, 15, 0
+fnichol, Edmonton, Canada, 265, 1053, 11, 0
+postmodern, , 394, 1049, 7, 2
+masarakki, Tokyo, JP, 143, 1045, 11, 0
+zzak, San Francisco, 279, 1043, 25, 2
+cldwalker, Boston, MA, 182, 1041, 27, 14
+thomasballinger, , 144, 1036, 14, 0
+stephenplusplus, Michigan, 308, 1021, 12, 2
+aaronpk, Portland, OR, 221, 1005, 11, 0
+tonymorris, Brisbane, 724, 1005, 14, 0
+andrew, Bath, UK, 700, 1002, 36, 3
+koush, Seattle, WA, 2500, 1000, 16, 4
+joshk, Berlin, Germany, 210, 997, 10, 0
+shiftkey, Sydney, Australia, 201, 991, 7, 0
+fukayatsu, Shibuya, Tokyo(Japan), 126, 987, 22, 0
+briandfoy, , 240, 985, 45, 45
+mojodna, Seattle, WA, 231, 980, 6, 2
+Unitech, Paris, France, 265, 973, 11, 0
+joliss, , 255, 973, 10, 0
+ConradIrwin, San Francisco, 265, 972, 13, 0
+timruffles, UK, 119, 969, 8, 0
+ujihisa, Vancouver, Canada, 416, 963, 78, 6
+ryanseys, Ottawa, Canada, 369, 963, 26, 2
+arvindr21, Hyderabad, India, 137, 961, 22, 2
+motemen, Kyoto, Japan, 238, 959, 19, 2
+technomancy, , 1200, 959, 13, 0
+dchest, , 151, 958, 8, 0
+begriffs, San Francisco, 129, 957, 19, 0
+sartak, Somerville, MA, 210, 955, 364, 0
+jsantell, San Francisco, 221, 955, 22, 0
+gfx, Tokyo, Japan, 425, 946, 16, 0
+futoase, Japan, 112, 946, 13, 0
+pydanny, Inland Empire, CA, 1100, 940, 37, 2
+arturoc, , 424, 939, 13, 4
+davidcelis, Portland, OR, 103, 938, 11, 0
+indirect, San Francisco, 402, 924, 13, 6
+roidrage, Berlin, Germany, 356, 923, 16, 0
+kazeburo, yokohama, japan, 192, 922, 10, 0
+rchavik, Jakarta, Indonesia, 123, 921, 31, 0
+tansaku, London UK, 123, 920, 11, 0
+dakrone, Amsterdam, NL, 137, 920, 11, 3
+etrepum, San Francisco, CA, 220, 920, 17, 3
+tmeasday, Melbourne, Australia, 254, 911, 7, 0
+Seldaek, Zürich, Zurich, Switzerland, 1100, 909, 11, 2
+pgte, Funchal, Portugal, 488, 908, 19, 0
+bkerley, Miami, FL, 114, 907, 6, 2
+JacksonTian, Hangzhou, China, 3100, 907, 9, 2
+lmorchard, Royal Oak, MI, USA, 207, 900, 10, 0
+tricknotes, Sapporo, Japan, 126, 896, 27, 10
+gorsuch, Oklahoma City, OK, 107, 896, 11, 0
+flyingmachine, , 137, 891, 21, 0
+ghoneycutt, Indianapolis, 124, 891, 6, 0
+machida, tokyo, 137, 882, 337, 337
+andris9, Tallinn, Estonia, 245, 880, 10, 0
+fayland, China, 139, 877, 13, 0
+timelyportfolio, , 187, 873, 6, 0
+masondesu, Greenville, SC, 126, 872, 8, 0
+soffes, San Francisco, 2200, 871, 12, 0
+mislav, Europe, 1400, 870, 12, 2
+technicalpickles, Savannah, GA, 428, 869, 7, 2
+phlipper, Near Lake Tahoe, CA, 592, 855, 8, 0
+cmeiklejohn, Rhode Island, 139, 850, 9, 0
+metajack, Albuquerque, NM  USA, 241, 842, 15, 0
+jexp, Dresden, Germany, 175, 838, 14, 7
+dialelo, Madrid, 105, 838, 20, 0
+aslakhellesoy, London, UK, 541, 832, 7, 0
+mapmeld, New York City, NY, 105, 827, 19, 0
+panesofglass, Manvel, TX, United States, 141, 821, 9, 0
+brycebaril, Seattle, WA, 109, 810, 11, 0
+groundwater, San Francisco, 255, 807, 20, 0
+purplecabbage, Vancouver, Canada, 162, 806, 37, 0
+mzp, Nagoya, Japan, 160, 806, 15, 0
+vincenthz, , 109, 806, 7, 0
+skade, Germany, 106, 801, 10, 0
+markdalgleish, Melbourne, Australia, 335, 800, 36, 0
+ivanoats, Seattle, Washington, USA, 186, 797, 12, 0
+toranb, Des Moines, IA, 113, 797, 15, 2
+brianloveswords, Brooklyn, New York, 198, 795, 6, 0
+xaviershay, Melbourne, Australia, 397, 788, 9, 0
+voodootikigod, Reston, VA, 429, 787, 8, 0
+rjrodger, Ireland, 151, 783, 9, 0
+bitemyapp, Austin, TX, 180, 781, 14, 7
+janl, Berlin, Germany, 917, 780, 7, 0
+umpirsky, Niš, Serbia, 110, 778, 8, 0
+dtinth, Thailand, 118, 773, 8, 0
+igorw, Berlin, 882, 773, 10, 6
+alexsalas, San Diego, Venezuela, 149, 772, 7, 0
+proger, Ukraine, 151, 770, 14, 0
+potch, Palo Alto, CA, 127, 769, 6, 0
+duckinator, Pittsburgh, PA, 115, 765, 14, 0
+chrisdickinson, Portland, OR, 306, 763, 11, 0
+kisom, United States, 129, 754, 12, 4
+airportyh, , 139, 750, 7, 0
+ktmud, Amsterdam, the Netherlands, 249, 750, 26, 0
+niftylettuce, , 195, 745, 16, 0
+dustin, Sunnyvale, CA, 597, 745, 698, 698
+XadillaX, Hangzhou, China, 119, 737, 54, 54
+martindale, Atlanta, GA, 135, 737, 9, 3
+elliotwoods, International, 279, 735, 11, 0
+brianc, Brooklyn, NY, 205, 728, 20, 0
+gnufied, Bangalore, India, 110, 719, 11, 0
+leobalter, Rio de Janeiro, Brazil, 269, 714, 9, 2
+charliesome, Melbourne, Australia, 3900, 710, 7, 0
+hone, Austin, TX, 291, 708, 6, 0
+hayeah, , 228, 708, 13, 0
+k1LoW, Fukuoka, JAPAN, 185, 701, 11, 5
+phated, Phoenix, AZ, 190, 697, 10, 2
+knu, Tokyo, Japan, 107, 691, 7, 0
+fnando, São Paulo, Brazil, 924, 691, 9, 0
+jamtur01, Brooklyn, New York, 376, 690, 20, 5
+chendo, Melbourne, Australia, 200, 689, 34, 0
+eugeneware, Melbourne, Australia, 115, 689, 11, 0
+rcarmo, Lisbon, Portugal, 118, 686, 16, 0
+pengwynn, TX, 794, 684, 34, 2
+thisandagain, Portland, OR, 152, 683, 17, 2
+zhuowei, , 162, 677, 14, 0
+samsonasik, Bandung, 137, 672, 9, 9
+caridy, Miami, FL., 126, 671, 7, 0
+arian, The Netherlands, 128, 664, 7, 0
+mikeal, Oakland, CA, USA, 1600, 663, 9, 5
+guilleiguaran, Colombia, 273, 661, 12, 0
+aslakknutsen, Oslo, Norway, 107, 661, 31, 0
+alindeman, Atlanta, GA, 200, 660, 10, 2
+drogus, Warsaw, 304, 656, 5, 0
+qrush, Buffalo, NY, 551, 655, 10, 3
+dodo, interwebz, 118, 654, 4, 0
+pat, Melbourne, 312, 653, 8, 0
+richo, Melbourne, Victoria, 142, 652, 8, 2
+twilson63, Charleston, SC, 182, 651, 10, 3
+jeremyjbowers, Washington, D.C., 172, 647, 5, 0
+jeffbcross, Mountain View, CA, 213, 645, 7, 2
+petehunt, San Francisco, CA, 754, 645, 13, 0
+progrium, Austin, TX, 1700, 644, 9, 0
+akrabat, Worcester, UK, 595, 635, 5, 0
+modocache, Brooklyn, NY, 295, 634, 17, 2
+wycats, San Francisco, 5500, 628, 17, 0
+bobthecow, , 443, 627, 9, 0
+skottler, Boston or NYC., 142, 619, 19, 2
+tugberkugurlu, Istanbul, Turkey, 195, 619, 10, 0
+wookiehangover, Boulder, CO, 186, 616, 24, 0
+h4ck3rm1k3, Lawrence, Kansas, USA, 178, 610, 7, 0
+deoxxa, Melbourne, Australia, 116, 608, 7, 0
+jlongster, Richmond, VA, 418, 606, 7, 0
+jcoglan, , 706, 602, 9, 2
+sidorares, Melbourne, Australia, 221, 600, 8, 3
+peterkokot, Area 51, 107, 599, 19, 0
+parndt, Christchurch, New Zealand, 258, 591, 14, 3
+gphat, San Francisco, CA, 110, 591, 7, 0
+erikh, San Francisco, CA, 135, 590, 15, 0
+geelen, Brisbane, Australia, 161, 588, 7, 0
+tswicegood, Austin, TX, 292, 587, 6, 0
+ramnathv, Montreal, 682, 584, 12, 0
+danchoi, Cambridge, MA, 166, 584, 9, 3
+ddollar, Atlanta, GA, 530, 583, 8, 0
+lyrixx, Paris, 118, 583, 8, 0
+marcusramberg, Oslo, Norway, 207, 580, 23, 0
+chrismatthieu, Phoenix, AZ, 198, 574, 6, 0
+johnmyleswhite, San Francisco, CA, 780, 571, 36, 0
+IceskYsl, china, 137, 570, 10, 0
+jeremykendall, Memphis, TN, 104, 570, 9, 0
+revolunet, Paris, France, 431, 565, 12, 0
+seejohnrun, Verona, NJ, 193, 565, 7, 0
+Miserlou, Berkeley, CA && Boston, MA, 213, 563, 13, 0
+dysinger, Hawaii, 133, 560, 12, 0
+apparentlymart, San Francisco, CA, 110, 556, 6, 0
+qiwsir, Suzhou China, 156, 551, 14, 3
+joefiorini, Cleveland, OH, 103, 551, 14, 0
+puffnfresh, Boulder, Colorado, 405, 546, 12, 0
+ahawkins, SFO, SJC, HEL, HAM, GOT & Around the World, 122, 546, 12, 3
+runemadsen, New York, 220, 545, 9, 0
+tobie, Geneva, Switzerland, 207, 544, 6, 0
+kirs, Budapest, 126, 543, 11, 5
+nddrylliog, I moved! See URL., 222, 539, 14, 0
+felixge, Berlin, Germany, 1700, 538, 9, 0
+thomasboyt, NYC, 106, 534, 8, 0
+calavera, San Francisco, 190, 528, 8, 0
+jtimberman, Colorado, 295, 528, 7, 3
+captn3m0, IIT Roorkee, 203, 527, 13, 0
+olivierlacan, Paris, France, 128, 527, 7, 0
+kyanny, Tokyo, Japan, 211, 519, 10, 0
+mtodd, San Francisco, CA, 303, 517, 6, 0
+vlandham, Seattle, WA, 151, 515, 20, 2
+brandonbloom, New York, NY, 142, 515, 13, 2
+davidbalbert, New York, NY, 164, 507, 6, 0
+phuu, UK, 182, 505, 13, 2
+paulirish, Palo Alto, 13000, 498, 8, 3
+mrtazz, Brooklyn, 148, 498, 6, 0
+andreyvit, Novosibirsk, Russia, 140, 493, 10, 0
+vti, Mars, 164, 489, 8, 5
+miohtama, Helsinki, 108, 484, 6, 0
+ngerakines, Centerville, OH, 254, 483, 11, 0
+qdot, Berkeley, CA, 194, 482, 7, 0
+atduskgreg, Cambridge, MA, 301, 482, 11, 0
+mbleigh, Los Angeles, CA, 507, 473, 9, 0
+evanphx, Los Angeles, CA, 699, 472, 15, 0
+banyan, Tokyo, Japan, 107, 472, 6, 0
+stas, Transylvania, 129, 469, 8, 0
+Mahdi-Rom, United Kingdom, 106, 469, 7, 0
+Gozala, Portland, OR, United States, 311, 469, 11, 0
+suissa, São Paulo - SP, 713, 466, 7, 0
+miyagawa, San Francisco, CA, 1600, 466, 8, 0
+anarchivist, Brooklyn, NY, 181, 462, 5, 0
+njh, London, UK, 122, 460, 7, 0
+Raynes, Los Angeles, CA, 287, 459, 7, 4
+hitode909, , 212, 454, 5, 0
+carsonmcdonald, Louisville, Kentucky, 190, 451, 129, 0
+skalnik, San Francisco, CA, 186, 451, 6, 3
+sritchie, Boulder, CO, 153, 447, 7, 0
+cndreisbach, Durham, NC, 101, 446, 8, 0
+rogeriopradoj, São Paulo, Brasil, 179, 445, 5, 3
+cho45, Japan, 396, 440, 11, 0
+rdohms, Amsterdam, The Netherlands, 230, 438, 7, 0
+cowboy, Boston, MA, 2000, 437, 11, 3
+yrashk, Nelson, BC, Canada, 347, 434, 16, 0
+caius, Shropshire, UK, 126, 430, 5, 0
+kjbekkelund, Oslo, Norway, 236, 429, 27, 0
+yhara, Matsue, JAPAN, 147, 426, 20, 0
+rochacbruno, São Paulo, Brazil, 282, 425, 7, 0
+devinus, Austin, TX, 115, 422, 5, 0
+mattray, Austin, TX, 149, 418, 6, 0
+astro, Dresden, Germany, 346, 415, 7, 0
+rmm5t, Louisville, Colorado (CO), 216, 410, 5, 0
+tyru, , 317, 408, 6, 0
+eric, Seattle, WA, 163, 404, 9, 0
+jesusabdullah, New York City, 322, 403, 6, 0
+elcuervo, Montevideo, Uruguay, 110, 397, 6, 2
+qmx, Sao Paulo, Brazil, 234, 393, 7, 0
+apg, New York, NY, 164, 390, 8, 0
+burtbeckwith, Boston, MA, 219, 389, 4, 0
+audreyr, Inland Empire, CA, 495, 389, 38, 0
+bjeanes, San Francisco, 158, 389, 7, 0
+ariejan, Breugel, the Netherlands, 117, 387, 6, 0
+glix, NYC, 106, 386, 19, 0
+vicapow, , 245, 384, 11, 0
+naoya, Tokyo, Japan, 876, 382, 3, 0
+udzura, Fukuoka, Japan, 121, 381, 5, 0
+nono, Paris, France, 147, 381, 6, 0
+joshlong, San Francisco, CA, 514, 380, 9, 0
+deepak1556, National Institute of Technology, 103, 378, 11, 2
+bingos, , 158, 378, 7, 2
+vic, Mexico City, 108, 376, 88, 0
+pwnall, Cambridge, MA, 185, 375, 7, 2
+voxpelli, Malmö, Sweden, 106, 374, 5, 0
+yuroyoro, Tokyo, 348, 373, 3, 0
+SlexAxton, Austin, TX, 1300, 372, 6, 0
+daaku, , 301, 370, 5, 0
+jianingy, Beijing, China, 121, 367, 9, 0
+phinze, Chicago, IL, 178, 367, 8, 4
+straup, New York City, 246, 365, 10, 0
+Nijikokun, San Francisco, California, 152, 364, 5, 0
+acdha, Washington, DC, 167, 364, 5, 0
+nvie, Netherlands, 783, 364, 6, 0
+leereilly, San Francisco, CA, 282, 362, 4, 0
+kyledrake, Portland, Oregon, USA, 309, 359, 9, 0
+pmuellr, Apex, NC, 115, 349, 14, 0
+svetlyak40wt, Moscow, 200, 347, 5, 0
+cavneb, American Fork, Utah, 109, 346, 6, 0
+saturnflyer, Arlington, VA, 138, 345, 4, 0
+rhiokim, Seoul in Korea, 120, 341, 7, 0
+tmm1, San Francisco, CA, 1400, 339, 9, 2
+jussi-kalliokoski, Helsinki, 192, 337, 6, 0
+graydon, Vancouver, BC, 547, 336, 5, 0
+jchris, Mountain View, CA, 496, 333, 6, 0
+MarcWeber, , 134, 332, 10, 3
+kossnocorp, Saint Petersburg, Russia, 123, 331, 13, 0
+ashleygwilliams, brooklyn, nyc, 157, 330, 6, 0
+ELLIOTTCABLE, Chicago, IL, 260, 327, 6, 0
+reeze, Beijing, China, 271, 326, 9, 9
+creaktive, Amsterdam, The Netherlands, 125, 326, 20, 0
+potomak, Venice, Italy, 120, 324, 6, 0
+tcorral, Barcelona, 192, 318, 7, 0
+ieure, Portland, OR, 118, 317, 8, 0
+honza, Halifax, Canada, 112, 315, 6, 0
+hirocaster, Shibuya, Tokyo, Japan, 167, 312, 6, 0
+coreyhaines, chicago, il, 433, 311, 4, 0
+cyx, California, 113, 308, 5, 0
+tavisrudd, Vancouver, 699, 305, 78, 0
+wraithan, Portland, OR, 151, 304, 6, 0
+davglass, Marion, IL, 641, 303, 5, 0
+ahoward, 2030 17th street, boulder, co, 80302, 382, 301, 6, 0
+iamcal, San Francisco, CA, 345, 300, 5, 0
+technoweenie, Louisville, CO, 2100, 300, 5, 0
+WebReflection, San Francisco, 239, 291, 8, 2
+robashton, London, 324, 288, 27, 0
+burtlo, Alameda, CA, 131, 288, 9, 0
+burke, Ottawa, Ontario, Canada, 132, 286, 4, 0
+kenu, seoul, 212, 285, 9, 0
+keijiro, Japan, 362, 280, 6, 0
+kaiquewdev, Brazil, Sao Paulo, SP, 121, 279, 3, 0
+dscape, London, United Kingdom, 440, 277, 5, 0
+bmizerany, , 885, 271, 11, 0
+dariusk, Boston, 241, 264, 5, 2
+kentaro, Tokyo, Japan, 310, 262, 10, 0
+antimatter15, , 469, 259, 6, 0
+msurguy, Seattle, WA, 353, 257, 6, 0
+spencertipping, Albuquerque, NM, 140, 257, 15, 0
+bsspirit, Beijing, 233, 257, 7, 0
+hirose31, Tokyo, Japan, 180, 249, 5, 0
+jpetazzo, San Francisco, 379, 248, 6, 0
+kracekumar, Bangalore, 185, 247, 5, 0
+rpetrich, , 984, 246, 6, 0
+kholia, , 141, 239, 5, 0
+leto, Portland, OR, 271, 238, 5, 0
+judofyr, Oslo, Norway, 216, 234, 5, 0
+undoZen, Beijing, China, 102, 234, 16, 2
+avsej, Minsk, Belarus, 105, 230, 7, 0
+cowboyd, Austin, TX, 189, 229, 4, 0
+avar, Amsterdam, The Netherlands, 138, 229, 4, 0
+maxdemarzi, 60601, 246, 228, 5, 0
+mbbx6spp, Urbana, IL, 174, 225, 5, 0
+codepo8, London, England, 855, 222, 7, 3
+lloyd, Sofia, Bulgaria, 372, 218, 8, 0
+umaar, London, 171, 216, 13, 0
+markrendle, UK, 217, 216, 7, 0
+jondot, Tel Aviv, Israel, 168, 216, 5, 0
+takano32, Roppongi, Tokyo, Japan, 213, 216, 5, 0
+wfarr, Atlanta, GA, 247, 213, 3, 0
+gedelumbung, /home/lumbung, 142, 213, 2, 0
+jsocol, Brooklyn, NY, 190, 211, 4, 0
+riywo, San Francisco, 143, 209, 6, 0
+josephmisiti, nyc, ny, 171, 206, 11, 0
+serby, London, 124, 206, 4, 0
+xdissent, East Nashville, TN, 116, 204, 4, 0
+ndbroadbent, Shymkent, Kazakhstan, 112, 203, 6, 0
+soapdog, Niteroi, RJ, Brazil, 129, 202, 4, 0
+mattetti, Santa Monica, CA, 649, 201, 5, 0
+manveru, Germany, 179, 199, 6, 0
+gabrielfalcao, Brooklyn, NY, 300, 199, 5, 2
+andypiper, Kingston upon Thames, UK, 142, 196, 5, 0
+xdite, Taipei, Taiwan / San Francisco, 683, 195, 4, 0
+mrkn, Sapporo, Japan, 221, 194, 9, 0
+maccman, San Francisco, 3000, 194, 4, 0
+yandod, Tokyo, 186, 193, 5, 0
+yyuu, Tokyo, Japan, 137, 193, 4, 0
+excid3, St Louis, Missouri, 189, 190, 5, 0
+aaronksaunders, Washington DC and New York City, 290, 188, 18, 0
+auser, San Francisco, CA, 467, 186, 5, 0
+ojii, Tokyo, Japan, 198, 180, 3, 0
+jergason, Utah, 120, 178, 5, 0
+avdi, Pennsylvania, USA, 1000, 175, 11, 0
+benatkin, Flagstaff, AZ, 117, 173, 7, 0
+blackfalcon, Seattle, WA, 122, 173, 4, 0
+abh, Los Angeles, CA, 166, 170, 5, 0
+rentzsch, Chicagoland+WI, 773, 168, 5, 0
+djanowski, Buenos Aires, Argentina, 140, 168, 5, 0
+kr, San Francisco, 506, 168, 4, 0
+tmc, San Francisco, CA, 132, 165, 5, 0
+komagata, Tokyo Japan, 238, 165, 6, 0
+lemenkov, Moscow, Russia, 110, 162, 4, 0
+joshbuddy, San Francisco, CA, 427, 160, 5, 0
+yihuang, Shenzhen, China, 103, 158, 6, 0
+happy4crazy, New York, NY, 134, 158, 28, 0
+devn, Madison, WI, 113, 157, 8, 0
+jpillora, Sydney, Australia, 105, 156, 4, 0
+chrisglass, Moshi, Tanzania, 124, 155, 4, 0
+stagas, cosmos, 238, 152, 6, 0
+bmeck, Austin, Texas, 131, 151, 3, 0
+matschaffer, San Jose, CA, 130, 146, 4, 0
+JackDanger, San Francisco, 221, 145, 8, 2
+aviflombaum, NYC, 159, 142, 3, 0
+rmoriz, Munich, Germany, 104, 138, 4, 0
+jugyo, San Francisco, 386, 135, 4, 0
+lstoll, Berlin, Germany, 122, 134, 4, 0
+franckcuny, Berkeley, 123, 133, 5, 0
+jashmenn, San Francisco, 217, 133, 4, 0
+tpruvot, Genève, Suisse / France, 175, 132, 3, 0
+smtlaissezfaire, San Francisco, 183, 130, 4, 0
+raggi, California or Bermuda, 296, 130, 4, 0
+lusis, Roswell, GA., 231, 126, 4, 4
+jasondavies, London, UK, 552, 124, 3, 0
+reinh, Portland, OR, 134, 119, 3, 0
+asenchi, Lansing, MI, 109, 117, 3, 0
+fjakobs, Amsterdam, 116, 114, 3, 0
+gonzalo123, , 185, 114, 3, 0
+nashby, Belarus, Minsk, 111, 109, 3, 2
+xushiwei, , 406, 107, 4, 0
+loiane, Sao Paulo, Brazil, 1000, 105, 4, 0
+jamescarr, Columbia, MO, 160, 105, 5, 0
+gilesbowkett, New Mexico, 330, 104, 3, 0
+EvanDotPro, Gilbert, Arizona, 501, 101, 2, 0
+yappo, , 322, 97, 2, 0
+foca, Montevideo, Uruguay, 273, 96, 2, 0
+subtleGradient, Fremont, CA, 413, 96, 4, 0
+nRike, México D.F., 102, 95, 3, 0
+halfbyte, Hamburg, Germany, 109, 95, 3, 0
+perigrin, Orlando, 159, 95, 3, 0
+qiaoxueshi, Beijing, China, 137, 93, 4, 4
+nuclearsandwich, Santa Clara Valley, California, 121, 91, 2, 0
+typester, Kamakura, Japan, 392, 88, 4, 0
+thefonso, Chicago illinois, 109, 87, 3, 0
+dotnetcurry, Global, 112, 84, 2, 0
+temasek, Singapore, 108, 83, 4, 0
+iammerrick, Provo, UT, 212, 81, 4, 0
+jdunck, San Francisco, CA, 108, 79, 3, 0
+melo, Figueira da Foz, Portugal, 201, 78, 3, 0
+oren, , 101, 75, 3, 0
+shingara, Nay ( France ), 109, 71, 4, 0
+bmabey, Salt Lake City, Utah, 158, 70, 2, 0
+nakajima, San Francisco, 535, 66, 2, 0
+pkrumins, Riga, Latvia, 1800, 65, 4, 0
+halorgium, Floating down a mountain either by ski or foot, 135, 60, 2, 0
+spullara, Los Altos, CA, 228, 60, 3, 0
+evadne, Worldwide, 235, 57, 2, 0
+dshaw, San Francisco, CA, 506, 52, 2, 0
+edavis10, Portland, OR USA, 372, 49, 3, 0
+airhorns, Ottawa, 124, 46, 3, 0
+aral, Brighton, UK, 292, 46, 2, 0
+jrockway, Brooklyn, New York, 291, 46, 2, 0
+brianleroux, San Francisco, USA || Vancouver, Canada, 829, 43, 3, 0
+brynary, New York City, 444, 39, 3, 0
+railsjedi, San Francisco, CA, 177, 31, 3, 0
+hassox, Australia, 196, 30, 3, 3
+rafl, Brooklyn, New York, 341, 26, 2, 0
+trapd00r, sweden, 228, 25, 2, 0
+nu7hatch, Berlin, Germany, 158, 24, 2, 0
+vim-scripts, , 2400, 23, 1, 0
+kastner, New Jersey, 154, 22, 4, 0
+sr, Brussels, Belgium, 423, 22, 2, 0
+ChineseDron, , 108, 20, 2, 0
+yaakaito, Tokyo, 106, 20, 1, 0
+ricardobeat, Amsterdam, 210, 20, 2, 0
+jm, Orlando, FL, 445, 19, 2, 0
+cyndibaby905, Beijing, China, 155, 17, 2, 0
+davidcoallier, Cork, Ireland, 141, 15, 1, 0
+JT5D, New York City, 123, 15, 2, 0
+dcrec1, Sao Paulo - Brazil, 124, 12, 2, 0
+predominant, Tokyo, Japan, 225, 11, 2, 0
+jamesgolick, New York, 532, 8, 2, 0
+froschi, Berlin, Germany, 390, 7, 1, 0
+genki, Tokyo, Japan, 117, 6, 1, 0
+douglas, Brasília,Brazil, 102, 2, 1, 0
+pageman, Manila, Philippines, 224, 2, 1, 0
+tjweir, Toronto, 108, 2, 1, 0
+stevestreza, , 474, 2, 1, 0
+gnemoug, beijing, china, 232, 1, 1, 0
+stonegao, Beijing, 125, 1, 1, 0
