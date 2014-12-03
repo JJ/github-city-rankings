@@ -2,6 +2,9 @@
 fs = require 'fs'
 utils = require './utils'
 
+id=process.env.GH_ID
+secret=process.env.GH_SECRET
+
 DISQUALIFIED = [
   'gugod'         # 7K commits in 4 days.
   'sindresorhus'  # Asked to remove himself from the list.
@@ -11,10 +14,11 @@ DISQUALIFIED = [
 ]
 
 saveTopLogins = ->
-  MIN_FOLLOWERS = 255
+  MIN_FOLLOWERS = 100
   MAX_PAGES = 10
+  MIN_REPOS = 100
   urls = utils.range(1, MAX_PAGES + 1).map (page) -> [
-      "https://api.github.com/search/users?q=followers:%3E#{MIN_FOLLOWERS}+sort:followers&per_page=100"
+      "https://api.github.com/search/users?client_id=#{id}&client_secret=#{secret}&q=followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100"
       "&page=#{page}"
     ].join('')
 
