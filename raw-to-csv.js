@@ -9,14 +9,14 @@ fs.readFile( json_file, 'utf8', function( err,data ) {
     } else {
 	var content = JSON.parse( data );
 	if (content ) {
-	    console.log(" ,", columns.join(", "));
+	    console.log(columns.join("; "));
 	    for ( var i in content ) {
 		var this_user = content[i];
 		var this_user_array = new Array;
 		for ( var j in columns ) {
 		    this_user_array.push( this_user[columns[j]]);
 		}
-		console.log( this_user_array.join( ", "));
+		console.log( this_user_array.join( "; "));
 	    }
 	}
     }
