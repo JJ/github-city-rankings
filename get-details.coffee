@@ -1,6 +1,7 @@
 #!/usr/bin/env coffee
 cheerio = require 'cheerio'
 utils = require './utils'
+city=process.argv[2]
 
 stats = {}
 
@@ -45,6 +46,6 @@ saveStats = ->
   logins = require './temp-logins.json'
   urls = logins.map (login) -> "https://github.com/#{login}"
   utils.batchGet urls, getStats, ->
-    utils.writeStats './raw/github-users-stats.json', sortStats stats
+    utils.writeStats './raw/github-users-stats-'+city+'.json', sortStats stats
 
 saveStats()

@@ -1,4 +1,6 @@
 #!/usr/bin/env coffee
+
+city=process.argv[2]
 fs = require 'fs'
 
 # Reducer.
@@ -89,4 +91,4 @@ stats2markdown = (datafile, mdfile, title) ->
   fs.writeFileSync mdfile, out
   console.log 'Saved to', mdfile
 
-stats2markdown './raw/github-users-stats.json', './formatted/active.md'
+stats2markdown './raw/github-users-stats-'+city+'.json', './formatted/active-'+city+'.md'
