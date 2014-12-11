@@ -41,12 +41,11 @@ stats2markdown = (datafile, mdfile, title) ->
   from.setYear today.getFullYear() - 1
 
   out = """
-  # Most active GitHub users ([git.io/top](http://git.io/top))
+  # Usuarios de GitHub más activos ([http://git.io/grx-top-gh](http://git.io/grx-top-gh))
 
-  The count of contributions (summary of Pull Requests, opened issues and commits) to public repos at GitHub.com from **#{from.toGMTString()}** till **#{today.toGMTString()}**.
+  Cuenta las contribuciones a los repos públicos (issues, pull requests y commits de repos públicos) en GitHub.com desde  **#{from.toGMTString()}** hasta **#{today.toGMTString()}**.
 
-  Only first 1000 GitHub users according to the count of followers are taken.
-  This is because of limitations of GitHub search. Sorting algo in pseudocode:
+  Si llega a 1000, lo cortamos ahí. Por lo pronto no hay peligro. Sorting algo in pseudocode:
 
   ```coffeescript
   githubUsers
@@ -55,7 +54,7 @@ stats2markdown = (datafile, mdfile, title) ->
     .slice(0, #{maxNumber})
   ```
 
-  Made with data mining of GitHub.com ([raw data](https://gist.github.com/4524946), [script](https://github.com/paulmillr/top-github-users)) by [@paulmillr](https://github.com/paulmillr) with contribs of [@lifesinger](https://github.com/lifesinger). Updated once per week.
+  Hecho usando el API de GitHub.com ([datos en otro directorio](https://github.com/JJ/top-github-users-data/tree/master/data), [script](https://github.com/JJ/top-github-users)) adaptado de [@paulmillr](https://github.com/paulmillr) con contribuciones de [@lifesinger](https://github.com/lifesinger) y adaptación de [JJ](http://jj.github.io). Actualizado de vez en cuando.
 
   <table cellspacing="0"><thead>
   <th scope="col">#</th>
