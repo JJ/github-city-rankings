@@ -8,4 +8,4 @@ coffee check-logins.coffee $@
 coffee get-details.coffee $@
 coffee format-users.coffee $@
 mv raw/github-users-stats-$1.json ../top-github-users-data/data/
-mv formatted/active-$1.md ../top-github-users-data/formatted/active-Granada.md 
+mv formatted/active-$1.md ../top-github-users-data/formatted/active-$1.md 

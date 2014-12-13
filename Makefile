@@ -12,7 +12,6 @@ format: 3
 	coffee get-details.coffee
 
 3:
-	coffee format-languages.coffee
 	coffee format-users.coffee
 
 4: sync-raw sync-formatted
@@ -32,6 +31,3 @@ sync-formatted:
 clean:
 	rm temp-logins.json
 	rm old-logins.json
-	rm raw/github-languages-stats.json
-	rm raw/github-users-stats.json
-	rm formatted/active.md

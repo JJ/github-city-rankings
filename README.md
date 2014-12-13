@@ -1,10 +1,11 @@
-# GitHub top users
+# GitHub City Rankings
 
-Generated stats: [git.io/top](http://git.io/top).
+
+This project is a fork of [Top GitHub Users](https://github.com/paulmillr/top-github-users) by [Paul Miller](http://paulmillr.com/). Below is the original README. 
 
 ## Usage
 
-Make sure you’ve got node.js and coffeescript installed.
+Make sure you’ve got node.js and coffeescript installed. Create also the default directories, `raw` and `formatted`
 
 ```bash
 # Install deps.
@@ -21,11 +22,19 @@ make get
 make format
 ```
 
+## Or also
+
+Edit `get-city.sh` for your city and run
+
+    ./get-city.sh 
+
+To get the data on that city.
+
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2013 Paul Miller (http://paulmillr.com/)
+Copyright (c) 2013,2014 Paul Miller (http://paulmillr.com/) JJ Merelo (http://jj.github.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the “Software”), to deal
