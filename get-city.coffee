@@ -4,7 +4,7 @@ Top = require './lib/top'
 
 id=process.env.GH_ID
 secret=process.env.GH_SECRET
-city=process.argv[2]
+city=process.argv[2] || "Vigo"
 
 top_city = new Top city, id, secret
 top_city.get_logins (all) =>
