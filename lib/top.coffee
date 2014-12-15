@@ -64,6 +64,20 @@ class Top
           @stats[userStats.login] = userStats
           userStats
 
+        # Writes in CSV format
+        to_csv: ( an_array, file_name ) =>
+                columns =  [ 'login','location','followers','contributions','contributionsStreak','contributionsCurrentStreak']
+                output = [ columns.join("; ") ]
+                for row in an_array
+                        console.log( "Array row" )
+                        this_row = []
+                        console.log row
+                        this_row.push( row[column] ) for column in columns
+                        output.push this_row.join( ";" )
+                fs.writeFileSync( file_name, output.join("\n"))      
+                
+                 
+
         # Retrieves logins and puts everythin else in motion
         get_logins: ( callback ) =>
                 urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q=location:"+@city+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
@@ -77,11 +91,12 @@ class Top
                               name not in DISQUALIFIED
                         urls = @logins.map (login) -> "https://github.com/#{login}"
                         utils.batchGet urls, this.getStats, =>
-                                console.log "Batchget" 
-                                console.log @stats 
                                 @sorted_stats = sortStats @stats
                                 fs.writeFileSync(@config.output_dir+"/data/user-data-"+@city+".json"
                                         , JSON.stringify(@sorted_stats))
+                                this.to_csv( @sorted_stats, @config.output_dir+"/data/user-data-"+@city+".csv")
+                                @sorted_stats
+                                
                 callback
 
 module.exports = Top
