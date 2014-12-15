@@ -1,22 +1,23 @@
 {
-  "name": "top-github-users",
+  "name": "github-city-rankings",
   "version": "0.1.0",
-  "description": "[Generated stats](https://gist.github.com/2657075).",
-  "main": "utils.js",
+  "description": "[Generated stats](https://git.io/grx-th-top).",
+  "main": "get-coffee.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/paulmillr/top-github-users.git"
+    "url": "git@github.com:JJ/github-city-rankings.git"
   },
-  "author": "Paul Miller",
+  "author": "Paul Miller + JJ Merelo",
   "license": "MIT",
   "gitHead": "e6a55ed9abd436d3c60323e6cc1d2b3ad6784abb",
   "readmeFilename": "README.md",
   "dependencies": {
+    "batch": "~0.3.2",
     "cheerio": "~0.10.5",
-    "superagent": "~0.14.0",
-    "batch": "~0.3.2"
+    "ect": "^0.5.9",
+    "superagent": "~0.14.0"
   }
 }
