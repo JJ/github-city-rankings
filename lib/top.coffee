@@ -66,10 +66,9 @@ class Top
 
         # Writes in CSV format
         to_csv: ( an_array, file_name ) =>
-                columns =  [ 'login','location','followers','contributions','contributionsStreak','contributionsCurrentStreak']
+                columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
                 output = [ columns.join("; ") ]
                 for row in an_array
-                        console.log( "Array row" )
                         this_row = []
                         console.log row
                         this_row.push( row[column] ) for column in columns
