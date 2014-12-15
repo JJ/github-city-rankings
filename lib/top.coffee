@@ -1,5 +1,6 @@
 utils = require './utils-node'
 cheerio = require 'cheerio'
+fs = require 'fs'
 
 DISQUALIFIED = [
   'gugod'         # 7K commits in 4 days.
@@ -26,13 +27,15 @@ sortStats = (stats) ->
                 
 class Top
         constructor: ( city, id, secret ) ->
+                if  fs.existsSync 'config.json'
+                        @config = JSON.parse fs.readFileSync('config.json','utf8')
                 @city = city
                 @id = id
                 @secret = secret
                 @logins = []
                 @stats = []
                 @sorted_stats = []
-
+                
 
         # Retrieves statistics for one user from the web site
         getStats: (html) =>
@@ -77,6 +80,8 @@ class Top
                                 console.log "Batchget" 
                                 console.log @stats 
                                 @sorted_stats = sortStats @stats
-
+                                fs.writeFileSync(@config.output_dir+"/data/user-data-"+@city+".json"
+                                        , JSON.stringify(@sorted_stats))
+                callback
 
 module.exports = Top
