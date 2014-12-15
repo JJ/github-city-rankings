@@ -1,34 +1,30 @@
 # GitHub City Rankings
 
 
-This project is a fork of [Top GitHub Users](https://github.com/paulmillr/top-github-users) by [Paul Miller](http://paulmillr.com/). Below is the original README. 
+This project is a fork of [Top GitHub Users](https://github.com/paulmillr/top-github-users) by [Paul Miller](http://paulmillr.com/). 
 
 ## Usage
 
-Make sure you’ve got node.js and coffeescript installed. Create also the default directories, `raw` and `formatted`
+First, create the directories where data is going to be placed. These directories will be defined in `config.json`.
+Create an ID and SECRET in your GitHub account. If you don't, you wont be able to do more than a couple of runs per hour (20 request in total). Then, set them with
 
-```bash
-# Install deps.
-npm install
-# Download and format everything.
-make
-
-# or
-
-# Download data.
-make get
-
-# Generate stats.
-make format
+```basH
+export GH_ID=LONG_HEXA_number
+export GH_SECRET=EVEN_LONGER_HEXA_number
 ```
 
-## Or also
 
-Edit `get-city.sh` for your city and run
+Install `node.js` and `coffeescript`. You're better off if you install `nvm` and then proceed from there. Once node is installed, 
 
-    ./get-city.sh 
+```bash
+# Global install coffeescript
+npm install -g coffee-script
+# Install deps. from package.json
+npm install
+# Generate data 
+./get-coffee <city of your election>
+```
 
-To get the data on that city.
 
 ## License
 
