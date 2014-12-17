@@ -1,7 +1,7 @@
 # GitHub City Rankings
 
 
-This project is a fork of [Top GitHub Users](https://github.com/paulmillr/top-github-users) by [Paul Miller](http://paulmillr.com/). 
+This project is a fork of [Top GitHub Users](https://github.com/paulmillr/top-github-users) by [Paul Miller](http://paulmillr.com/).
 
 ## Usage
 
@@ -14,15 +14,15 @@ export GH_SECRET=EVEN_LONGER_HEXA_number
 ```
 
 
-Install `node.js` and `coffeescript`. You're better off if you install `nvm` and then proceed from there. Once node is installed, 
+Install `node.js` and `coffeescript`. You're better off if you install `nvm` and then proceed from there. Once node is installed,
 
 ```bash
 # Global install coffeescript
 npm install -g coffee-script
 # Install deps. from package.json
 npm install
-# Generate data 
-./get-coffee <city of your election>
+# Generate data
+./get-city.coffee <city of your election>
 ```
 
 
