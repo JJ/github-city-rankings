@@ -10,20 +10,25 @@ from = new Date()
 from.setYear today.getFullYear() - 1	
 
 usuarios= [
-        (lugar: 1
-        nick: 'KK'
-        contrib:2000
-        stars:3
-        lenguajes:'Brainfuck'
-        location:'Polopos'
-        avatar:"[uno](cosa.aqui)" )
-        ( lugar: 2
-        nick: 'KKX'
-        contrib:1000
-        stars:5
-        lenguajes:'PHP'
-        location:'Marajena'
-        avatar:"[dos](cosa.aqui)" )
+        (
+                lugar: 1
+                nick: 'KK'
+                contrib:2000
+                stars:3
+                lenguajes:'Brainfuck'
+                location:'Polopos'
+                avatar:"[uno](cosa.aqui)"
+        )
+        
+        (
+                lugar: 2
+                nick: 'KKX'
+                contrib:1000
+                stars:5
+                lenguajes:'PHP'
+                location:'Marajena'
+                avatar:"[dos](cosa.aqui)"
+        )
         ]
                 
 data=

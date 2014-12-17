@@ -60,7 +60,7 @@ class Top
                 login: byProp('additionalName').text().trim()
                 location: byProp('homeLocation').text().trim()
                 language: (/\sin ([\w-+#\s\(\)]+)/.exec(pageDesc)?[1] ? '')
-                gravatar: byProp('image').attr('href')
+                gravatar: byProp('image').attr('href').replace(400,64)
                 followers: getFollowers()
                 stars : getStars()
                 organizations: $('#site-container > div > div > div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName)
@@ -84,7 +84,7 @@ class Top
                  
 
         # Retrieves logins and puts everythin else in motion
-        get_logins: ( callback ) =>
+        get_logins: ( renderer ) =>
                 urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q=location:"+@city+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
 
                 parse = (text) ->
@@ -100,8 +100,23 @@ class Top
                                 fs.writeFileSync(@config.output_dir+"/data/user-data-"+@city+".json"
                                         , JSON.stringify(@sorted_stats))
                                 this.to_csv( @sorted_stats, @config.output_dir+"/data/user-data-"+@city+".csv")
+                                today = new Date()
+                                from = new Date()
+                                from.setYear today.getFullYear() - 1	
+                                data=
+                                        start_date: from.toGMTString()
+                                        end_date: from.toGMTString()
+                                        usuarios: []
+                                i = 1
+                                for user in @sorted_stats
+                                        console.log user
+                                        user.lugar = i++
+                                        data.usuarios.push( user )
+                                        
+                                console.log data
+                                fs.writeFileSync(@config.output_dir+"/formatted/top-"+@city+".md"
+                                        , renderer.render('layout.ect', data) )
                                 @sorted_stats
                                 
-                callback
 
 module.exports = Top
