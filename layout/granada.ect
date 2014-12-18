@@ -1,4 +1,4 @@
-# Usuarios de GitHub más activos ([http://git.io/top-gh](http://git.io/top-gh))
+# Usuarios de GitHub más activos ([http://git.io/grx-top](http://git.io/grx-top))
 
   Cuenta las contribuciones a los repos públicos (issues, pull requests y commits de repos públicos) en GitHub.com desde  **<%- @start_date %>** hasta **<%- @end_date %>**.
 
@@ -7,5 +7,5 @@
 | Puesto   |      Usuario      |  Contribuciones | Stars | Lenguajes   |      Lugar      |  Avatar |
 |----------|:-----------------:|----------------:|-------|-------------|:---------------:|---------|
 <% for u in @usuarios : %>
-| <%- u.lugar %> | [<%- u.login %>](https://github.com/<%- u.login %>) | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | ![<%- u.name %>](<%- u.gravatar %>) |
+| <%- u.lugar %> | <%- u.login %> | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | ![<%- u.name %>](<%- u.gravatar %>) |
 <% end %>
