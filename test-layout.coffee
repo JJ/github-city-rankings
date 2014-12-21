@@ -37,4 +37,4 @@ data=
         usuarios: usuarios
         
 console.log data             
-console.log renderer.render('layout.ect', data )
+console.log renderer.render('granada.ect', data )

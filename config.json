@@ -1,3 +1,4 @@
 {
-    "output_dir": "../top-github-users-data"
+    "output_dir": "../top-github-users-data",
+    "layout": "layout.ect"
 }

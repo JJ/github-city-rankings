@@ -27,9 +27,15 @@ sortStats = (stats) ->
                 
 class Top
         constructor: ( city, id, secret ) ->
-                if  fs.existsSync 'config.json'
+                if  fs.existsSync "#{city}.json"
+                        @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
+                        @city = @config.city
+                else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
-                @city = city
+                        @city = city
+
+                @output_dir = @config.output_dir
+                @layout = @config.layout
                 @id = id
                 @secret = secret
                 @logins = []
@@ -97,25 +103,24 @@ class Top
                         urls = @logins.map (login) -> "https://github.com/#{login}"
                         utils.batchGet urls, this.getStats, =>
                                 @sorted_stats = sortStats @stats
-                                fs.writeFileSync(@config.output_dir+"/data/user-data-"+@city+".json"
+                                fs.writeFileSync(@output_dir+"/data/user-data-"+@city+".json"
                                         , JSON.stringify(@sorted_stats))
-                                this.to_csv( @sorted_stats, @config.output_dir+"/data/user-data-"+@city+".csv")
+                                this.to_csv( @sorted_stats, @output_dir+"/data/user-data-"+@city+".csv")
                                 today = new Date()
                                 from = new Date()
                                 from.setYear today.getFullYear() - 1	
                                 data=
                                         start_date: from.toGMTString()
                                         end_date: from.toGMTString()
+                                        ciudad : @city
                                         usuarios: []
                                 i = 1
                                 for user in @sorted_stats
                                         console.log user
                                         user.lugar = i++
                                         data.usuarios.push( user )
-                                        
-                                console.log data
-                                fs.writeFileSync(@config.output_dir+"/formatted/top-"+@city+".md"
-                                        , renderer.render('layout.ect', data) )
+                                fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
+                                        , renderer.render(@layout, data) )
                                 @sorted_stats
                                 
 
