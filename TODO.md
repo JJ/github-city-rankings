@@ -10,4 +10,6 @@
 * [x] See what happens with number of contributions and why they are different to what appears on page
 * [ ] Warn of number of remaining API requests
 * [x] Fix number of stars, it points now to contributed repos.
+* [ ] Now that we have another page, get fork stats
+* [ ] Create more accurate searches or filters per city
 
