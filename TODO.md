@@ -7,4 +7,4 @@
 * [ ] Set up comparisons with previous values and up/down ratings
 * [ ] Make only as many requests as needed
 * [ ] Add stats githubbers per city
-* [ ] Fix number of stars, it points now to contributed repos.
+* [x] Fix number of stars, it points now to contributed repos.
