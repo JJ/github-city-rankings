@@ -89,26 +89,7 @@ class Top
                         output.push this_row.join( ";" )
                 fs.writeFileSync( file_name, output.join("\n"))
 
-
-
-        # Retrieves logins and puts everythin else in motion
-        get_logins: ( renderer ) =>
-                @renderer = renderer
-                urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q=location:"+@city+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
-
-                parse = (text) ->
-                    JSON.parse(text).items.map (_) -> _.login
-
-                utils.batchGet urls, parse, (all) =>
-                        logins = [].concat.apply [], all
-                        @logins = logins.filter (name) ->
-                              name not in DISQUALIFIED
-                        urls = @logins.map (login) -> "https://github.com/#{login}"
-                        utils.batchGet urls, this.getStats, =>
-                            urls = @logins.map (login) -> "https://github.com/#{login}?tab=repositories"
-                            utils.batchGet urls, this.add_stars, this.give_format
-
-
+        # Formats and outputs files
         give_format: =>
                 @sorted_stats = sortStats @stats
                 fs.writeFileSync(@output_dir+"/data/user-data-"+@city+".json"
@@ -130,6 +111,27 @@ class Top
                 fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
                         , @renderer.render(@layout, data) )
                 @sorted_stats
+
+
+        # Retrieves logins and puts everythin else in motion
+        get_logins: ( renderer ) =>
+                @renderer = renderer
+                urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q=location:"+@city+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
+
+                parse = (text) ->
+                    JSON.parse(text).items.map (_) -> _.login
+
+                utils.batchGet urls, parse, (all) =>
+                        logins = [].concat.apply [], all
+                        @logins = logins.filter (name) ->
+                              name not in DISQUALIFIED
+                        urls = @logins.map (login) -> "https://github.com/#{login}"
+                        utils.batchGet urls, this.getStats, =>
+                                urls = @logins.map (login) -> "https://github.com/#{login}?tab=repositories"
+                                utils.batchGet urls, this.add_stars, this.give_format
+
+
+
 
 
 module.exports = Top
