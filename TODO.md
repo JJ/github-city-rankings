@@ -7,3 +7,5 @@
 * [ ] Set up comparisons with previous values and up/down ratings
 * [ ] Make only as many requests as needed
 * [ ] Add stats githubbers per city
+* [ ] See what happens with number of contributions and why they are different to what appears on page
+* [ ] Warn of number of remaining API requests
