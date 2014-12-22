@@ -21,10 +21,29 @@ Install `node.js` and `coffeescript`. You're better off if you install `nvm` and
 npm install -g coffee-script
 # Install deps. from package.json
 npm install
-# Generate data
-./get-city.coffee <city of your election>
 ```
 
+Cities can be configured by ECT templates, which reside in the `layout` dir; for the time being there is only one for Granada. If you want to use that template, or any other thing such as a particular output directory, create a configuration file such as this one
+
+```
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Granada",
+    "layout": "granada.ect"
+}
+```
+
+With that configuration file called `granada.json`, generate a ranking using
+```
+# Generate data
+./get-city.coffee granada
+```
+
+If there is not such configuration file, the general `config.json` is used, and you can generate the ranking with
+
+```
+./get-city.coffee Málaga
+```
 
 ## License
 
