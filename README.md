@@ -29,9 +29,12 @@ Cities can be configured by ECT templates, which reside in the `layout` dir; for
 {
     "output_dir": "../top-github-users-data",
     "city" : "Granada",
+	"exclude": "El Granada",
     "layout": "granada.ect"
 }
 ```
+
+`exclude` is a regular expression for excluding certain patterns in the location field; those users will be excluded from the files.
 
 With that configuration file called `granada.json`, generate a ranking using
 ```

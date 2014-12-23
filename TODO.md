@@ -11,5 +11,8 @@
 * [ ] Warn of number of remaining API requests
 * [x] Fix number of stars, it points now to contributed repos.
 * [ ] Now that we have another page, get fork stats
-* [ ] Create more accurate searches or filters per city
+* [x] Create more accurate searches or filters per city
+  * [ ] Filter users before they are added to the list, not after. Probably the whole user management will have to be changed.
+* [ ] Fix problem with generated table when there are ; in the locatio field
+* [ ] Add unit tests.
 
