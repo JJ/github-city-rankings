@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Córdoba",
+    "exclude" : "(Argentina|Cuarto|AR)",
+    "layout": "cordoba.ect"
+}

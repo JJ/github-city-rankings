@@ -83,10 +83,12 @@ class Top
                 columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
                 output = [ columns.join("; ") ]
                 for row in an_array
-                        this_row = []
-                        console.log row
-                        this_row.push( row[column] ) for column in columns
-                        output.push this_row.join( ";" )
+                        if !row.location.match(@config.exclude)
+                                this_row = []
+                                console.log row
+                                this_row.push( row[column] ) for column in columns
+                                output.push this_row.join( ";" )
+                                
                 fs.writeFileSync( file_name, output.join("\n"))
 
         # Formats and outputs files
@@ -105,9 +107,11 @@ class Top
                         usuarios: []
                 i = 1
                 for user in @sorted_stats
-                        console.log user
-                        user.lugar = i++
-                        data.usuarios.push( user )
+                        if !user.location.match(@config.exclude)
+                                console.log user
+                                user.lugar = i++
+                                data.usuarios.push( user )
+                                
                 fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
                         , @renderer.render(@layout, data) )
                 @sorted_stats
