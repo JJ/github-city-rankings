@@ -1,5 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Granada",
+    "exclude" : "El Granada",
     "layout": "granada.ect"
 }
