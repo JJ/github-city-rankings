@@ -30,7 +30,11 @@ class Top
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
-                        @location =  @config.location.reduce (loc,yoc) -> "location:#{loc}+location:#{yoc}"
+                        if @config.location
+                                @location =  @config.location.reduce (loc,yoc) -> "location:#{loc}+location:#{yoc}"
+                        else
+                                @location = "location:#{city}"
+                                
                         console.log @location 
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
@@ -110,11 +114,12 @@ class Top
                         usuarios: []
                 i = 1
                 for user in @sorted_stats
-                        if !user.location.match(@config.exclude)
+                        if (@config.exclude and not user.location.match(@config.exclude) ) or not @config.exclude
                                 console.log user
                                 user.lugar = i++
                                 data.usuarios.push( user )
-                                
+                console.log "Usuarios "
+                console.log data.usuarios
                 fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
                         , @renderer.render(@layout, data) )
                 @sorted_stats
