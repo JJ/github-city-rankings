@@ -105,7 +105,7 @@ class Top
                 from.setYear today.getFullYear() - 1
                 data=
                         start_date: from.toGMTString()
-                        end_date: from.toGMTString()
+                        end_date: today.toGMTString()
                         ciudad : @city
                         usuarios: []
                 i = 1
