@@ -13,19 +13,29 @@ DISQUALIFIED = [
 MIN_FOLLOWERS = 0
 MAX_PAGES = 10
 MIN_REPOS = 0
+MIN_CONTRIBUTIONS = 1
 
-sortStats = (stats) ->
-        minContributions = 1
+# Returns the set of users, filtered and sorted. 
+sortStats = (stats, excludes) ->
+
         Object.keys(stats)
         .filter (login) ->
-                stats[login].contributions >= minContributions
+                stats[login].contributions >= MIN_CONTRIBUTIONS
+        .filter (login) ->
+                if ( excludes )
+                        login if not stats[login].location.match(excludes)
+                else
+                        login
         .sort (a, b) ->
                 stats[b].contributions - stats[a].contributions
         .map (login) ->
                 stats[login]
 
-
+# Class ranking. Processes ranking and saves info to files.
 class Top
+
+        #Class constructor. Needs the name of the city for file
+        #creation, checks if there is a specific configuration file
         constructor: ( city, id, secret ) ->
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
@@ -35,7 +45,6 @@ class Top
                         else
                                 @location = "location:#{city}"
                                 
-                        console.log @location 
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
@@ -89,18 +98,13 @@ class Top
         to_csv: ( an_array, file_name ) =>
                 columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
                 output = [ columns.join("; ") ]
-                for row in an_array
-                        if !row.location.match(@config.exclude)
-                                this_row = []
-                                console.log row
-                                this_row.push( row[column] ) for column in columns
-                                output.push this_row.join( ";" )
-                                
                 fs.writeFileSync( file_name, output.join("\n"))
 
         # Formats and outputs files
         give_format: =>
-                @sorted_stats = sortStats @stats
+                @sorted_stats = sortStats @stats, @config.exclude
+                console.log "sorted_stats"
+                console.log @sorted_stats 
                 fs.writeFileSync(@output_dir+"/data/user-data-"+@city+".json"
                         , JSON.stringify(@sorted_stats))
                 this.to_csv( @sorted_stats, @output_dir+"/data/user-data-"+@city+".csv")
@@ -112,20 +116,16 @@ class Top
                         end_date: today.toGMTString()
                         ciudad : @city
                         usuarios: []
-                i = 1
+                i=1
                 for user in @sorted_stats
-                        if (@config.exclude and not user.location.match(@config.exclude) ) or not @config.exclude
-                                console.log user
-                                user.lugar = i++
-                                data.usuarios.push( user )
-                console.log "Usuarios "
-                console.log data.usuarios
+                        user.lugar = i++
+                        data.usuarios.push( user )
                 fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
                         , @renderer.render(@layout, data) )
                 @sorted_stats
 
 
-        # Retrieves logins and puts everythin else in motion
+        # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
                 urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
