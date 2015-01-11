@@ -30,9 +30,12 @@ class Top
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
+                        @location =  @config.location.reduce (loc,yoc) -> "location:#{loc}+location:#{yoc}"
+                        console.log @location 
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
+                        @location = "location:#{city}"
 
                 @output_dir = @config.output_dir
                 @layout = @config.layout
@@ -120,7 +123,7 @@ class Top
         # Retrieves logins and puts everythin else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
-                urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q=location:"+@city+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
+                urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
