@@ -98,6 +98,11 @@ class Top
         to_csv: ( an_array, file_name ) =>
                 columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
                 output = [ columns.join("; ") ]
+                for row in an_array
+                        this_row = []
+                        console.log row
+                        this_row.push( row[column] ) for column in columns
+                        output.push this_row.join( ";" )
                 fs.writeFileSync( file_name, output.join("\n"))
 
         # Formats and outputs files
