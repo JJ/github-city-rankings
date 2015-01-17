@@ -85,6 +85,7 @@ class Top
                 contributions: getInt $('#contributions-calendar > div:nth-child(3) > span.contrib-number').text()
                 contributionsStreak: getInt $('#contributions-calendar > div:nth-child(4) > span.contrib-number').text()
                 contributionsCurrentStreak: getInt $('#contributions-calendar > div:nth-child(5) > span.contrib-number').text()
+          userStats.location = userStats.location.replace(/\;/g,",")
           @stats[userStats.login] = userStats
           userStats
 
