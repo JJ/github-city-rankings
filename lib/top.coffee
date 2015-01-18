@@ -31,6 +31,13 @@ sortStats = (stats, excludes) ->
         .map (login) ->
                 stats[login]
 
+# Adds location string taking into account whitespace
+addLocation = (location ) ->
+        if location.match(/\s+/)
+                "location:%22"+encodeURI(location)+"%22"
+        else
+                "location:#{location}"
+                
 # Class ranking. Processes ranking and saves info to files.
 class Top
 
@@ -42,18 +49,15 @@ class Top
                         @city = @config.city
                         if @config.location
                                 locations =  @config.location.map (loc) ->
-                                        if loc.match(/\s+/)
-                                                "location:%22"+encodeURI(loc)+"%22"
-                                        else
-                                                "location:#{loc}"
+                                        addLocation( loc )
                                 @location =  locations.join("+")
                         else
-                                @location = "location:#{city}"
-                                
+                                @location=addLocation(city)
+
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
-                        @location = "location:#{city}"
+                        @location = addLocation(city)
 
                 @output_dir = @config.output_dir
                 @layout = @config.layout
