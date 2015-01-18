@@ -41,7 +41,8 @@ class Top
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
                         if @config.location
-                                @location =  @config.location.reduce (loc,yoc) -> "location:#{loc}+location:#{yoc}"
+                                locations =  @config.location.map (loc) -> "location:"+encodeURI(loc)
+                                @location =  locations.join("+")
                         else
                                 @location = "location:#{city}"
                                 
