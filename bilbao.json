@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Bilbao","Bilbo","Bizkaia","Vizcaya"],
+    "city" : "Bilbao",
+    "layout": "layout.ect"
+}

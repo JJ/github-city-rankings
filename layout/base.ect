@@ -1,0 +1,14 @@
+<% content %>
+
+  Cuenta las contribuciones a los repos públicos (issues, pull requests y commits de repos públicos) en GitHub.com desde  **<%- @start_date %>** hasta **<%- @end_date %>**.
+
+  Hecho usando el API de [GitHub](http://github.com) ([datos en otro directorio](https://github.com/JJ/top-github-users-data/tree/master/data), [script](https://github.com/JJ/top-github-users)) adaptado de [@paulmillr](https://github.com/paulmillr) con contribuciones de [@lifesinger](https://github.com/lifesinger) y adaptación de [JJ](http://jj.github.io) con contribuciones de [Benito Palacios `@pleonex`](http://github.com/pleonex). Actualizado de vez en cuando. 
+
+  Sugerencias y parches en [`github-city-rankings`](http://github.com/JJ/github-city-rankings)
+
+
+| Puesto   |      Usuario      |  Contribuciones | Stars | Lenguajes   |      Lugar      |  Avatar |
+|----------|:-----------------:|----------------:|-------|-------------|:---------------:|---------|
+<% for u in @usuarios : %>
+| <%- u.lugar %> | [<%- u.login %>](https://github.com/<%- u.login %>) | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | <img src='<%- u.gravatar %>' width='64' height='64' title='<%- u.name %>'> |
+<% end %>
