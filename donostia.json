@@ -1,6 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Donostia","Donosti","Guipúzcoa","Gipuzkoa"],
+    "location": ["Donostia","Donosti","Guipúzcoa","Gipuzkoa","San Sebastián"],
     "city" : "Donostia",
     "layout": "layout.ect"
 }
