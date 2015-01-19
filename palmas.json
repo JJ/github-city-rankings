@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Palmas","Gran Canaria"],
+    "city" : "Las Palmas",
+    "layout": "layout.ect"
+}
