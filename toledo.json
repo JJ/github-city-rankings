@@ -1,6 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Toledo",
-    "exclude" : "(OH|Ohio|Bra)",
+    "exclude" : "(OH|Ohio|Bra|Wash|WA|PR|Or)",
     "layout": "layout.ect"
 }
