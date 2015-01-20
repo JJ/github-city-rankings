@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Asturias","Asturies","Oviedo","Uvieu","Gijón"],
+    "city" : "Asturias",
+    "layout": "layout.ect"
+}

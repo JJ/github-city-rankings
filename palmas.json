@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "location": ["Palmas","Gran Canaria"],
     "city" : "Las Palmas",
+    "exclude" : "Bra",
     "layout": "layout.ect"
 }
