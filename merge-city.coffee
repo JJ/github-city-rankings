@@ -5,12 +5,12 @@ fs = require 'fs'
 glob = require 'glob'
 layout = "layout.ect"
 
-glob '../top-github-users-data/data/*.json',{}, ( error, files ) =>
+glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
         users = []
         user_logins = {}
         if error
                 exit
-        for filename in files
+        for filename in files when filename isnt '../top-github-users-data/data/user-data-España.json'
                 file = fs.readFileSync filename, 'utf8'
                 these_users = JSON.parse file
                 for user in these_users
