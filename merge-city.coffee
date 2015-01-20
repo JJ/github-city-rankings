@@ -3,6 +3,7 @@
 ECT = require 'ect'
 fs = require 'fs'
 glob = require 'glob'
+top = require './lib/top'
 layout = "layout.ect"
 
 glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
@@ -36,7 +37,8 @@ glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
                 user.lugar = i++
                 data.usuarios.push( user )
 
-        fs.writeFileSync "../top-github-users-data//formatted/top-alt-Spain.md", renderer.render( layout, data )
+        fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
+        top.to_csv( users[0..999], "../top-github-users-data/formatted/top-alt-Spain.csv")
 
 
 

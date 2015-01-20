@@ -1,4 +1,5 @@
-utils = require './utils-node'
+utils_node = require './utils-node'
+Utils = require './utils.coffee'
 cheerio = require 'cheerio'
 fs = require 'fs'
 
@@ -13,51 +14,29 @@ DISQUALIFIED = [
 MIN_FOLLOWERS = 0
 MAX_PAGES = 10
 MIN_REPOS = 0
-MIN_CONTRIBUTIONS = 1
 
-# Returns the set of users, filtered and sorted. 
-sortStats = (stats, excludes) ->
 
-        Object.keys(stats)
-        .filter (login) ->
-                stats[login].contributions >= MIN_CONTRIBUTIONS
-        .filter (login) ->
-                if ( excludes )
-                        login if not stats[login].location.match(excludes)
-                else
-                        login
-        .sort (a, b) ->
-                stats[b].contributions - stats[a].contributions
-        .map (login) ->
-                stats[login]
-
-# Adds location string taking into account whitespace
-addLocation = (location ) ->
-        if location.match(/\s+/)
-                "location:%22"+encodeURI(location)+"%22"
-        else
-                "location:#{location}"
-                
 # Class ranking. Processes ranking and saves info to files.
 class Top
 
         #Class constructor. Needs the name of the city for file
         #creation, checks if there is a specific configuration file
         constructor: ( city, id, secret ) ->
+                @utils = new Utils
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
                         if @config.location
                                 locations =  @config.location.map (loc) ->
-                                        addLocation( loc )
+                                        @utils.addLocation( loc )
                                 @location =  locations.join("+")
                         else
-                                @location=addLocation(city)
+                                @location=@utils.addLocation(city)
 
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
-                        @location = addLocation(city)
+                        @location = @utils.addLocation(city)
 
                 @output_dir = @config.output_dir
                 @layout = @config.layout
@@ -104,25 +83,14 @@ class Top
             userStats = @stats[login]
             userStats.stars += parseInt(num.children[2].data.trim()) for num in $("[aria-label='Stargazers']")
 
-        # Writes in CSV format
-        to_csv: ( an_array, file_name ) =>
-                columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
-                output = [ columns.join("; ") ]
-                for row in an_array
-                        this_row = []
-                        console.log row
-                        this_row.push( row[column] ) for column in columns
-                        output.push this_row.join( ";" )
-                fs.writeFileSync( file_name, output.join("\n"))
-
         # Formats and outputs files
         give_format: =>
-                @sorted_stats = sortStats @stats, @config.exclude
+                @sorted_stats = @utils.sortStats @stats, @config.exclude
                 console.log "sorted_stats"
                 console.log @sorted_stats 
                 fs.writeFileSync(@output_dir+"/data/user-data-"+@city+".json"
                         , JSON.stringify(@sorted_stats))
-                this.to_csv( @sorted_stats, @output_dir+"/data/user-data-"+@city+".csv")
+                @utils.to_csv( @sorted_stats, @output_dir+"/data/user-data-"+@city+".csv")
                 today = new Date()
                 from = new Date()
                 from.setYear today.getFullYear() - 1
@@ -143,19 +111,19 @@ class Top
         # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
-                urls = utils.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
+                urls = utils_node.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+followers:%3E#{MIN_FOLLOWERS}+repos:%3E#{MIN_REPOS}+sort:followers&per_page=100&page=#{page}"
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
 
-                utils.batchGet urls, parse, (all) =>
+                utils_node.batchGet urls, parse, (all) =>
                         logins = [].concat.apply [], all
                         @logins = logins.filter (name) ->
                               name not in DISQUALIFIED
                         urls = @logins.map (login) -> "https://github.com/#{login}"
-                        utils.batchGet urls, this.getStats, =>
+                        utils_node.batchGet urls, this.getStats, =>
                                 urls = @logins.map (login) -> "https://github.com/#{login}?tab=repositories"
-                                utils.batchGet urls, this.add_stars, this.give_format
+                                utils_node.batchGet urls, this.add_stars, this.give_format
 
 
 
