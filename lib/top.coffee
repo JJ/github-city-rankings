@@ -23,7 +23,6 @@ class Top
         #creation, checks if there is a specific configuration file
         constructor: ( city, id, secret ) ->
                 @utils = new Utils
-                console.log( @utils )
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
