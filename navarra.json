@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Navarra",
+    "location": ["Navarra","Nafarroa","Pamplona","Iruña"],
+    "layout": "layout.ect"
+}
