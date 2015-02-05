@@ -11,10 +11,7 @@ DISQUALIFIED = [
   'beberlei' # 1.7K contribs every day
 ]
 
-MIN_FOLLOWERS = 0
 MAX_PAGES = 10
-MIN_REPOS = 0
-
 
 # Class ranking. Processes ranking and saves info to files.
 class Top
