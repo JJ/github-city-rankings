@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Guadalajara",
+    "exclude" : "(Jalisco|MX|Mex|México)",
+    "layout": "layout.ect"
+}
