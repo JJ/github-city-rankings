@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Lleida",
+    "location": ["Lleida","Lérida"],
+    "layout": "layout.ect"
+}
