@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Cantabria",
+    "location": ["Santander","Cantabria"],
+    "layout": "layout.ect"
+}

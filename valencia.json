@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Valencia",
+    "exclude" : "(Venez|CA|VE)",
+    "layout": "layout.ect"
+}
