@@ -3,5 +3,6 @@
     "city" : "Granada",
     "location": ["Granada","Graná"],
     "exclude" : "(El|Hills)",
+    "max_pages": 4,
     "layout": "granada.ect"
 }

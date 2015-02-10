@@ -3,5 +3,6 @@
     "location": ["Córdoba","Cordoba"],
     "city" : "Córdoba",
     "exclude" : "(rgenti|rgenet|Cuarto|AR|Cap|Vera)",
-    "layout": "cordoba.ect"
+    "layout": "cordoba.ect",
+    "max_pages": 3
 }
