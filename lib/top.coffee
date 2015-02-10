@@ -29,11 +29,16 @@ class Top
                                 @location =  locations.join("+")
                         else
                                 @location=@utils.addLocation(@city)
+                        if @config.max_pages
+                                @max_pages = @config.max_pages
+                        else
+                                @max_pages = MAX_PAGES
 
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
                         @location = @utils.addLocation(city)
+                        @max_pages = MAX_PAGES
 
                 @output_dir = @config.output_dir
                 @layout = @config.layout
@@ -109,7 +114,7 @@ class Top
         # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
-                urls = utils_node.range(1, MAX_PAGES + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
+                urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
