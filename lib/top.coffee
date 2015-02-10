@@ -124,8 +124,6 @@ class Top
                         urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D5&per_page=100&page=#{page}"
                         urls=urls_plus_5.concat(urls_less_5)
 
-                console.log(urls)
-
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
 
