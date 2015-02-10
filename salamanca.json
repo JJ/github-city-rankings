@@ -1,0 +1,7 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Salamanca",
+    "exclude" : "(Méx|Mex|Nic|Gto|Guana)",
+    "max_pages": 2,
+    "layout": "layout.ect"
+}
