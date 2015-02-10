@@ -1,0 +1,6 @@
+{
+    "output_dir": "../top-github-users-data",
+    "city" : "Soria",
+    "max_pages": 1,
+    "layout": "layout.ect"
+}
