@@ -23,6 +23,7 @@ class Top
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
+                        @big = @config.big
                         if @config.location
                                 locations =  @config.location.map (loc) =>
                                         @utils.addLocation( loc )
@@ -39,6 +40,7 @@ class Top
                         @city = city
                         @location = @utils.addLocation(city)
                         @max_pages = MAX_PAGES
+                        @big = false
 
                 @output_dir = @config.output_dir
                 @layout = @config.layout
@@ -114,7 +116,15 @@ class Top
         # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
-                urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
+                urls=[]
+                if ( !@big ) 
+                        urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
+                else
+                        urls_plus_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E5&per_page=100&page=#{page}"
+                        urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D5&per_page=100&page=#{page}"
+                        urls=urls_plus_5.concat(urls_less_5)
+
+                console.log(urls)
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
