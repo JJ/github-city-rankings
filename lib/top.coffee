@@ -12,6 +12,7 @@ DISQUALIFIED = [
 ]
 
 MAX_PAGES = 10
+CUTOFF = 5
 
 # Class ranking. Processes ranking and saves info to files.
 class Top
@@ -24,6 +25,10 @@ class Top
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
                         @city = @config.city
                         @big = @config.big
+                        if @config.cutoff
+                                @cutoff = @config.cutoff
+                        else
+                                @cutoff = CUTOFF
                         if @config.location
                                 locations =  @config.location.map (loc) =>
                                         @utils.addLocation( loc )
@@ -120,8 +125,8 @@ class Top
                 if ( !@big ) 
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
-                        urls_plus_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E5&per_page=100&page=#{page}"
-                        urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D5&per_page=100&page=#{page}"
+                        urls_plus_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff}&per_page=100&page=#{page}"
+                        urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D#{@cutoff}&per_page=100&page=#{page}"
                         urls=urls_plus_5.concat(urls_less_5)
 
                 parse = (text) ->

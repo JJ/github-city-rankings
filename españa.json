@@ -3,5 +3,6 @@
     "location": ["España","Spain","Espagne"],
     "city" : "España",
     "layout": "layout.ect",
-    "big" : true
+    "big" : true,
+    "cutoff" : 2
 }
