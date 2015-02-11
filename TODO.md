@@ -6,6 +6,7 @@
 * [x] Set up a cron job to do it automatically
 * [ ] Set up comparisons with previous values and up/down ratings
 * [ ] Make only as many requests as needed
+  * [x] Configure the number of requests.
 * [x] Add stats githubbers per city
 * [x] See what happens with number of contributions and why they are different to what appears on page
 * [ ] Warn of number of remaining API requests
