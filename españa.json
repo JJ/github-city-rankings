@@ -4,5 +4,5 @@
     "city" : "España",
     "layout": "layout.ect",
     "big" : true,
-    "cutoff" : 2
+    "cutoff" : 7
 }
