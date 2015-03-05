@@ -28,8 +28,7 @@ module.exports = class Utils
                     "location:#{location}"
 
     # Writes in CSV format
-    to_csv: ( an_array, file_name ) =>
-            columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak']
+    to_csv: ( an_array, file_name, columns =  [ 'login','location','followers','contributions','stars','contributionsStreak','contributionsCurrentStreak'] ) =>
             output = [ columns.join("; ") ]
             for row in an_array
                     this_row = []
