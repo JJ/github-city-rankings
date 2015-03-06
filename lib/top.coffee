@@ -27,6 +27,7 @@ class Top
                         @big = @config.big
                         if @config.cutoff
                                 @cutoff = @config.cutoff
+                                console.log @cutoff
                         else
                                 @cutoff = CUTOFF
                         if @config.location
@@ -125,9 +126,11 @@ class Top
                 if ( !@big ) 
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
-                        urls_plus_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff}&per_page=100&page=#{page}"
-                        urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D#{@cutoff}&per_page=100&page=#{page}"
-                        urls=urls_plus_5.concat(urls_less_5)
+                        urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
+                        for i in [1..@cutoff.length-1] by 1
+                                max_range = @cutoff[i-1]-1
+                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{@cutoff[i]}..#{max_range}&per_page=100&page=#{page}"
+                                urls=urls.concat(urls_less)
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
