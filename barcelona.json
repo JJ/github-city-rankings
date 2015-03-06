@@ -2,6 +2,6 @@
     "output_dir": "../top-github-users-data",
     "city" : "Barcelona",
     "layout": "layout.ect",
-    "cutoff" : 2,
+    "cutoff" : [3,1,0],
     "big" : true
 }
