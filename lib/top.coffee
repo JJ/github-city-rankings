@@ -30,12 +30,14 @@ class Top
                                 console.log @cutoff
                         else
                                 @cutoff = CUTOFF
+                                
                         if @config.location
                                 locations =  @config.location.map (loc) =>
                                         @utils.addLocation( loc )
                                 @location =  locations.join("+")
                         else
                                 @location=@utils.addLocation(@city)
+                                
                         if @config.max_pages
                                 @max_pages = @config.max_pages
                         else
@@ -128,8 +130,15 @@ class Top
                 else
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
                         for i in [1..@cutoff.length-1] by 1
-                                max_range = @cutoff[i-1]-1
-                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{@cutoff[i]}..#{max_range}&per_page=100&page=#{page}"
+                                max_range = min_range = -1
+                                if typeof @cutoff[i] isnt 'number'
+                                        max_range = @cutoff[i][1]
+                                        min_range = @cutoff[i][0]
+                                else
+                                        max_range = @cutoff[i-1]-1
+                                        min_range = @cutoff[i]
+                                        
+                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
                                 urls=urls.concat(urls_less)
 
                 parse = (text) ->
