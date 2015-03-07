@@ -16,4 +16,7 @@
   * [x] Filter users before they are added to the list, not after. Probably the whole user management will have to be changed.
 * [x] Fix problem with generated table when there are ; in the locatio field
 * [ ] Add unit tests.
-
+* [ ] Explore bitbucket APIs to add more users
+* [ ] Create exhaustive searches for locations with many users.
+  * [x] Implement a mechanism for *slicing* by number of followers.
+  * [ ] Additionally, slice by number of repositories.
