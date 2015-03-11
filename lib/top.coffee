@@ -132,14 +132,17 @@ class Top
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
                         for i in [1..@cutoff.length-1] by 1
                                 max_range = min_range = -1
+                                urls_less = []
                                 if typeof @cutoff[i] isnt 'number'
-                                        max_range = @cutoff[i][1]
-                                        min_range = @cutoff[i][0]
+                                        max_range = min_range = @cutoff[i][0]
+                                        repo_cutoff = @cutoff[i][1]
+                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3E#{repo_cutoff}&per_page=100&page=#{page}"
+                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
                                 else
                                         max_range = @cutoff[i-1]-1
                                         min_range = @cutoff[i]
-                                        
-                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
+                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
+
                                 urls=urls.concat(urls_less)
 
                 parse = (text) ->
