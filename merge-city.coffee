@@ -11,7 +11,7 @@ glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
         user_logins = {}
         if error
                 exit
-        for filename in files when filename isnt '../top-github-users-data/data/user-data-España.json'
+        for filename in files 
                 file = fs.readFileSync filename, 'utf8'
                 these_users = JSON.parse file
                 for user in these_users
