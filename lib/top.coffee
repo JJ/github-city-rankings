@@ -5,6 +5,8 @@ fs = require 'fs'
 
 DISQUALIFIED = [
         'rankingfaker' #good try, buster
+        'fbobbio' # from Argentina
+        'pablocelayes' #from Argentina
   'gugod'         # 7K commits in 4 days.
   'sindresorhus'  # Asked to remove himself from the list.
   'funkenstein'   # Appears in the list even though he has 30 followers (bug).

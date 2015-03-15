@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "location": ["Cádiz","Cadiz","Jerez","Puerto de Santa María","Algeciras"],
     "city" : "Cádiz",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "max_pages": 2
 }
