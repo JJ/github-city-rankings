@@ -1,0 +1,16 @@
+<% content %>
+
+Counts the contributions to public repositories (issues, pull requests and commi) in GitHub.com from  **<%- @start_date %>** to **<%- @end_date %>**.
+
+Made using [GitHub](http://github.com) API ([data elsewhere](https://github.com/JJ/github-country-data/tree/master/data), [script](https://github.com/JJ/top-github-users)) adapted from [@paulmillr](https://github.com/paulmillr) with contributions from [@lifesinger](https://github.com/lifesinger) and adaptation by [JJ](http://jj.github.io) with contributions from [Benito Palacios `@pleonex`](http://github.com/pleonex). Updated from time to time.
+
+  [Data](https://github.com/JJ/top-github-users-data/tree/master/data) has a free license and can be used whoever you want, but we would be grateful to be referenced if you publish results: [*GitHub rankings and its impact on the local free software development community*](https://thewinnower.com/papers/github-rankings-and-its-impact-on-the-local-free-software-development-community).
+
+  Suggestion and patches at [`JJ/github-city-rankings`](http://github.com/JJ/github-city-rankings).
+
+
+| Puesto   |  Usuario  |Contrib.| Stars | Lenguajes   |      Lugar      |  Avatar  |
+|----------|:---------:|-------:|-------|-------------|:---------------:|----------|
+<% for u in @usuarios : %>
+| <%- u.lugar %> | [<%- u.login %>](https://github.com/<%- u.login %>) | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | <img src='<%- u.gravatar %>' width='64' height='64' title='<%- u.name %>'> |
+<% end %>

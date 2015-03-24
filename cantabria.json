@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "city" : "Cantabria",
     "location": ["Santander","Cantabria"],
+     "exclude" : "Colombia",
     "layout": "layout.ect"
 }

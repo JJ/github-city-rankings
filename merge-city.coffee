@@ -11,7 +11,7 @@ glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
         user_logins = {}
         if error
                 exit
-        for filename in files when filename isnt '../top-github-users-data/data/user-data-España.json'
+        for filename in files 
                 file = fs.readFileSync filename, 'utf8'
                 these_users = JSON.parse file
                 for user in these_users
@@ -39,7 +39,7 @@ glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
 
         fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
         utils = new Utils
-        utils.to_csv( users[0..999], "../top-github-users-data/data/top-alt-Spain.csv")
+        utils.to_csv( users, "../top-github-users-data/data/aggregated-top-Spain.csv", [ 'login','location','followers','contributions','stars','language' ])
 
 
 

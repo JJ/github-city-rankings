@@ -1,8 +1,8 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["España","Spain","Espagne"],
+    "location": ["España","Spain","Espagne","Spanien"],
     "city" : "España",
     "layout": "layout.ect",
     "big" : true,
-    "cutoff" : 7
+    "cutoff" : [7,4,3,[2,1],[1,1],[0,4]]
 }

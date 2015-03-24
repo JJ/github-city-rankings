@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "location": ["Alicante","Alacant"],
     "city" : "Alicante",
+    "max_pages": 4,
     "layout": "layout.ect"
 }

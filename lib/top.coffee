@@ -4,6 +4,9 @@ cheerio = require 'cheerio'
 fs = require 'fs'
 
 DISQUALIFIED = [
+        'rankingfaker' #good try, buster
+        'fbobbio' # from Argentina
+        'pablocelayes' #from Argentina
   'gugod'         # 7K commits in 4 days.
   'sindresorhus'  # Asked to remove himself from the list.
   'funkenstein'   # Appears in the list even though he has 30 followers (bug).
@@ -27,14 +30,17 @@ class Top
                         @big = @config.big
                         if @config.cutoff
                                 @cutoff = @config.cutoff
+                                console.log @cutoff
                         else
                                 @cutoff = CUTOFF
+                                
                         if @config.location
                                 locations =  @config.location.map (loc) =>
                                         @utils.addLocation( loc )
                                 @location =  locations.join("+")
                         else
                                 @location=@utils.addLocation(@city)
+                                
                         if @config.max_pages
                                 @max_pages = @config.max_pages
                         else
@@ -125,9 +131,21 @@ class Top
                 if ( !@big ) 
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
-                        urls_plus_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff}&per_page=100&page=#{page}"
-                        urls_less_5 = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3C%3D#{@cutoff}&per_page=100&page=#{page}"
-                        urls=urls_plus_5.concat(urls_less_5)
+                        urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
+                        for i in [1..@cutoff.length-1] by 1
+                                max_range = min_range = -1
+                                urls_less = []
+                                if typeof @cutoff[i] isnt 'number'
+                                        max_range = min_range = @cutoff[i][0]
+                                        repo_cutoff = @cutoff[i][1]
+                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3E#{repo_cutoff}&per_page=100&page=#{page}"
+                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
+                                else
+                                        max_range = @cutoff[i-1]-1
+                                        min_range = @cutoff[i]
+                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
+
+                                urls=urls.concat(urls_less)
 
                 parse = (text) ->
                     JSON.parse(text).items.map (_) -> _.login
