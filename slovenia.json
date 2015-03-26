@@ -1,6 +1,6 @@
 {
     "output_dir": "../github-country-data",
-    "location": ["Portugal"],
-    "city" : "Portugal",
+    "location": ["Slovenia","Slovenija"],
+    "city" : "Slovenia",
     "layout": "layout-english.ect"
 }
