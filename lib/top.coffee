@@ -75,7 +75,7 @@ class Top
 
           pageDesc = $('meta[name="description"]').attr('content')
 
-          # compute stars
+          # compute stats
           userStats =
                 name: byProp('name').text().trim()
                 login: byProp('additionalName').text().trim()
@@ -83,6 +83,7 @@ class Top
                 language: (/\sin ([\w-+#\s\(\)]+)/.exec(pageDesc)?[1] ? '')
                 gravatar: byProp('image').attr('href').replace(400,64)
                 followers: getFollowers()
+                user_stars: $('.vcard-stats > a:nth-child(2) > .vcard-stat-count').text().trim()
                 stars : 0
                 organizations: $('#site-container > div > div > div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName)
                 contributions: getInt $('#contributions-calendar > div:nth-child(3) > span.contrib-number').text()
