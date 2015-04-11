@@ -137,7 +137,13 @@ class Top
                                         max_range = min_range = @cutoff[i][0]
                                         repo_cutoff = @cutoff[i][1]
                                         urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3E#{repo_cutoff}&per_page=100&page=#{page}"
-                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
+                                        if !@cutoff[i][2]
+                                                console.log @cutoff[i][2]
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
+                                        else
+                                                date_cutoff=@cutoff[i][2]
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3E#{date_cutoff}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3C%3D#{date_cutoff}&per_page=100&page=#{page}" )
                                 else
                                         max_range = @cutoff[i-1]-1
                                         min_range = @cutoff[i]
