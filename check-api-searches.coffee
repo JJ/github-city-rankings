@@ -11,7 +11,6 @@ city_top = new Top city, id, secret
 
 all_urls =  city_top.get_urls()
 urls = ( url for url in all_urls when url.match(/page=1\b/) )
-console.log urls
 total_results = 0
 requesting = ->
         url = urls.shift()
