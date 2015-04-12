@@ -1,6 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Balears","Baleares","Palma de Mallorca"],
+    "location": ["Balears","Baleares","Palma de Mallorca","Mallorca","Majorca"],
     "city" : "Baleares",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "max_pages": 4
 }
