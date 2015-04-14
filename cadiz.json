@@ -1,6 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Alcalá De Los Gazules", "Alcalá Del Valle", "Algar", "Algeciras", "Algodonales", "Arcos De La Frontera", "Barbate", "Los Barrios", "Benalup", "Benaocaz", "Bornos", "El Bosque", "Cadiz", "Cádiz", "Castellar De La Frontera", "Chiclana", "Chiclana De La Frontera", "Chipiona", "Conil De La Frontera", "Espera", "El Gastor", "Grazalema", "Jerez", "Jerez De La Frontera", "Jimena De La Frontera", "La Línea", "Medina", "Medina-Sidonia", "Olvera", "Paterna De Rivera", "Prado Del Rey", "Puerto De Santa María", "El Puerto De Santa María", "Puerto Real", "Puerto Serrano", "Rota", "San Fernando", "San José Del Valle", "San Roque", "Sanlúcar", "Sanlúcar De Barrameda", "Setenil", "Setenil De Las Bodegas", "Tarifa", "Torre Alháquime", "Trebujena", "Ubrique", "Vejer", "Vejer De La Frontera", "Villaluenga", "Villaluenga Del Rosario", "Villamartín", "Zahara"],
+    "location": [ "Algeciras",  "Arcos De La Frontera", "Barbate", "Los Barrios",   "Cadiz", "Cádiz",  "Chiclana", "Chiclana De La Frontera", "Chipiona", "Conil De La Frontera",  "Jerez", "Jerez De La Frontera", "Jimena De La Frontera", "La Línea", "Medina", "Medina-Sidonia",   "Puerto De Santa María", "El Puerto De Santa María", "Puerto Real",  "Rota", "San Fernando", "San Roque", "Sanlúcar", "Sanlúcar De Barrameda", "Setenil","Tarifa",  "Ubrique", "Vejer", "Vejer De La Frontera", "Villaluenga","Villamartín"],
     "city" : "Cádiz",
     "layout": "layout.ect",
     "max_pages": 3
