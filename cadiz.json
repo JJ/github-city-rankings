@@ -1,7 +1,8 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": [ "Algeciras",  "Arcos De La Frontera", "Barbate", "Los Barrios",   "Cadiz", "Cádiz",  "Chiclana", "Chiclana De La Frontera", "Chipiona", "Conil De La Frontera",  "Jerez", "Jerez De La Frontera", "Jimena De La Frontera", "La Línea", "Medina", "Medina-Sidonia",   "Puerto De Santa María", "El Puerto De Santa María", "Puerto Real",  "Rota", "San Fernando", "San Roque", "Sanlúcar", "Sanlúcar De Barrameda", "Setenil","Tarifa",  "Ubrique", "Vejer", "Vejer De La Frontera", "Villaluenga","Villamartín"],
+    "location": [ "Algeciras",  "Arcos De La Frontera", "Barbate", "Los Barrios",   "Cadiz", "Cádiz",  "Chiclana", "Chiclana De La Frontera", "Chipiona", "Conil De La Frontera",  "Jerez", "Jerez De La Frontera", "Jimena De La Frontera", "La Línea", "Medina-Sidonia",   "Puerto De Santa María", "El Puerto De Santa María", "Puerto Real",  "Rota", "San Roque", "Sanlúcar", "Sanlúcar De Barrameda", "Setenil","Tarifa",  "Ubrique", "Vejer", "Vejer De La Frontera", "Villaluenga","Villamartín"],
     "city" : "Cádiz",
+     "exclude" : "(USA|Philipp|Henares|California|Cap|Vera)",
     "layout": "layout.ect",
     "max_pages": 3
 }
