@@ -6,18 +6,26 @@ glob = require 'glob'
 Utils = require './lib/utils'
 layout = "layout.ect"
 
-glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
+
+glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
         users = []
         user_logins = {}
         if error
                 exit
-        for filename in files 
-                file = fs.readFileSync filename, 'utf8'
-                these_users = JSON.parse file
-                for user in these_users
-                        if not user_logins[user.login]
-                                users.push user
-                                user_logins[user.login] = user
+        files_biggies = files.filter ( f ) -> f.match( /(Catalunya|España|Andaluc)/ )
+        files_not_biggies = files.filter ( f ) -> ! f.match( /(Catalunya|España|Andaluc)/ )
+        files = files_biggies.concat files_not_biggies
+        for filename in files
+                do (filename ) =>
+                        place = /data-([^-]+)\./.exec(filename);
+                        file = fs.readFileSync filename, 'utf8'
+                        these_users = JSON.parse file
+                        for user in these_users
+                                do ( user ) =>
+                                        if not user_logins[user.login]
+                                                user.place = place[1]
+                                                users.push user
+                                                user_logins[user.login] = user
                         
         sorted_users = users.sort (a, b) ->
                 b.contributions - a.contributions
@@ -39,7 +47,7 @@ glob '../top-github-users-data/data/user-data-*.json',{}, ( error, files ) =>
 
         fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
         utils = new Utils
-        utils.to_csv( users, "../top-github-users-data/data/aggregated-top-Spain.csv", [ 'login','location','followers','contributions','stars','language' ])
+        utils.to_csv( users, "../top-github-users-data/data/aggregated-top-Spain.csv", [ 'login','location','place','followers','contributions','stars','user_stars', 'language' ])
 
 
 
