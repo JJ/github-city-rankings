@@ -14,7 +14,7 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
                 exit
         files_biggies = files.filter ( f ) -> f.match( /(Catalunya|España|Andaluc)/ )
         files_not_biggies = files.filter ( f ) -> ! f.match( /(Catalunya|España|Andaluc)/ )
-        files = files_biggies.concat files_not_biggies
+        files = files_not_biggies.concat files_biggies
         for filename in files
                 do (filename ) =>
                         place = /data-([^-]+)\./.exec(filename);
