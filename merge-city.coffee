@@ -47,7 +47,7 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
 
         fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
         utils = new Utils
-        utils.to_csv( users, "../top-github-users-data/data/aggregated-top-Spain.csv", [ 'login','location','place','followers','contributions','stars','user_stars', 'language' ])
+        utils.to_csv( users, "../top-github-users-data/data/processed/aggregated-top-Spain.csv", [ 'login','location','place','followers','contributions','stars','user_stars', 'language' ])
 
 
 
