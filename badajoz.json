@@ -1,0 +1,8 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Badajoz","Don Benito","Almendralejo","Mérida"],
+    "exclude" : "(Méx|Mex|Venez|Yuc|Cap|Vera)",
+    "city" : "Badajoz",
+    "layout": "layout.ect",
+    "max_pages": 2
+}
