@@ -4,5 +4,5 @@
     "exclude" : "(Méx|Mex|Venez|Yuc|Cap|Vera)",
     "city" : "Badajoz",
     "layout": "layout.ect",
-    "max_pages": 2
+    "max_pages": 3
 }

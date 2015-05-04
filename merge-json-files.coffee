@@ -8,13 +8,15 @@ layout = "layout.ect"
 name = process.argv[2] || "Spain"
 glob_pattern =process.argv[3] || "*"
 
-console.log  "../top-github-users-data/data/user-data-#{glob_pattern}.json"
-
 glob "../top-github-users-data/data/user-data-#{glob_pattern}.json", {}, ( error, files ) =>
         users = []
         user_logins = {}
         if error
                 exit
+
+        files_biggies = files.filter ( f ) -> f.match( /#{name}/ ) # to sort properly
+        files_not_biggies = files.filter ( f ) -> ! f.match( /#{name}/ )
+        files = files_not_biggies.concat files_biggies
         for filename in files
                 do (filename ) =>
                         place = /data-([^-]+)\./.exec(filename);
