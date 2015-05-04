@@ -5,16 +5,16 @@ fs = require 'fs'
 glob = require 'glob'
 Utils = require './lib/utils'
 layout = "layout.ect"
+name = process.argv[2] || "Spain"
+glob_pattern =process.argv[3] || "*"
 
+console.log  "../top-github-users-data/data/user-data-#{glob_pattern}.json"
 
-glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
+glob "../top-github-users-data/data/user-data-#{glob_pattern}.json", {}, ( error, files ) =>
         users = []
         user_logins = {}
         if error
                 exit
-        files_biggies = files.filter ( f ) -> f.match( /(Catalunya|España|Andaluc)/ ) # to sort properly
-        files_not_biggies = files.filter ( f ) -> ! f.match( /(Catalunya|España|Andaluc)/ )
-        files = files_not_biggies.concat files_biggies
         for filename in files
                 do (filename ) =>
                         place = /data-([^-]+)\./.exec(filename);
@@ -37,7 +37,7 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
         data=
                 start_date: from.toGMTString()
                 end_date: today.toGMTString()
-                ciudad : "Spain"
+                ciudad : name
                 usuarios: []
 
         i=1
@@ -45,9 +45,9 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
                 user.lugar = i++
                 data.usuarios.push( user )
 
-        fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
+        fs.writeFileSync "../top-github-users-data/formatted/top-alt-#{name}.md", renderer.render( layout, data )
         utils = new Utils
-        utils.to_csv( users, "../top-github-users-data/data/processed/aggregated-top-Spain.csv", [ 'login','location','place','followers','contributions','stars','user_stars', 'language' ])
+        utils.to_csv( users, "../top-github-users-data/data/processed/aggregated-top-#{name}.csv", [ 'login','location','place','followers','contributions','stars','user_stars', 'language' ])
 
 
 
