@@ -5,6 +5,10 @@ fs = require 'fs'
 
 DISQUALIFIED = [
         'rankingfaker' #good try, buster
+        'andresgsaravia' #from Mexico
+        'oscaruhp' #Mexico
+        'ArianCastillo' #Mexico
+        'sandritascs'
         'fbobbio' # from Argentina
         'pablocelayes' #from Argentina
   'gugod'         # 7K commits in 4 days.
