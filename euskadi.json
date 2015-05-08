@@ -1,0 +1,8 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Euskadi","Euzkadi","País Vasco", "Basque Country", "Euskal Herria","Euskalherria"],
+    "city" : "Euskadi",
+    "exclude": "Franc",
+    "layout": "layout.ect",
+    "max_pages": 2
+}
