@@ -1,6 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Bilbao","Bilbo","Bizkaia","Vizcaya"],
+    "location": ["Bilbao","Bilbo","Bizkaia","Vizcaya","Baracaldo","Barakaldo","Guecho","Getxo","Portugalete","Santurce","Santurtzi","Basauri", "Lejona","Leioa"],
     "city" : "Bilbao",
+    "max_pages": 5,
     "layout": "layout.ect"
 }

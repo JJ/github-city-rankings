@@ -12,7 +12,7 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
         user_logins = {}
         if error
                 exit
-        files_biggies = files.filter ( f ) -> f.match( /(Catalunya|España|Andaluc)/ ) # to sort properly
+        files_biggies = files.filter ( f ) -> f.match( /(Catalunya|España|Andaluc|Extremadura|Euskadi|Galicia)/ ) # to sort properly
         files_not_biggies = files.filter ( f ) -> ! f.match( /(Catalunya|España|Andaluc)/ )
         files = files_not_biggies.concat files_biggies
         for filename in files
