@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "city" : "Toledo",
     "exclude" : "(OH|Ohio|Bra|Wash|WA|PR|Or)",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "max_pages": 3
 }
