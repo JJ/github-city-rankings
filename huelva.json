@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
-    "city" : "Almería",
-    "location": ["Almería","Almeria"],
+    "city" : "Huelva",
+    "location": ["Huelva","Lepe","Almonte","Isla Cristina"],
     "max_pages": 5,
     "layout": "layout.ect"
 }

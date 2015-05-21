@@ -1,0 +1,8 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Murcia","Cartagena"],
+    "city" : "Murcia",
+    "exclude" : "(Colombia|CO|ndias)",
+    "layout": "layout.ect",
+    "max_pages": 3
+}
