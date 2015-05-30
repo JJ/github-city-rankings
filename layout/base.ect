@@ -12,5 +12,5 @@
 | Puesto   |  Usuario  |Contrib.| Stars | Lenguajes   |      Lugar      |  Avatar  |
 |----------|:---------:|-------:|-------|-------------|:---------------:|----------|
 <% for u in @usuarios : %>
-| <%- u.lugar %> | [<%- u.login %>](https://github.com/<%- u.login %>) | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | <img src='<%- u.gravatar %>' width='64' height='64' title='<%- u.name %>'> |
+| <%- u.lugar %> | [<%- u.login %>](https://github.com/<%- u.login %>) | <%- u.contributions %> | <%- u.stars %> | <%- u.language %> | <%- u.location %> | <img src='<%- u.gravatar %>' title='<%- u.name %>'> |
 <% end %>
