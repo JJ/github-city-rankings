@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Alicante","Alacant","Alcoi", "Alcoy","Benidorm"],
+    "location": ["Alicante","Alacant","Alcoi", "Alcoy","Benidorm","Elche","Elx"],
     "city" : "Alicante",
-    "max_pages": 3,
+    "max_pages": 5,
     "layout": "layout.ect"
 }
