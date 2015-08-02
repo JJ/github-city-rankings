@@ -37,14 +37,14 @@ class Top
                                 console.log @cutoff
                         else
                                 @cutoff = CUTOFF
-                                
+
                         if @config.location
                                 locations =  @config.location.map (loc) =>
                                         @utils.addLocation( loc )
                                 @location =  locations.join("+")
                         else
                                 @location=@utils.addLocation(@city)
-                                
+
                         if @config.max_pages
                                 @max_pages = @config.max_pages
                         else
@@ -64,6 +64,7 @@ class Top
                 @logins = []
                 @stats = []
                 @sorted_stats = []
+                utils_node.getLast(city,id,secret)
 
 
         # Retrieves statistics for one user from the web site
@@ -108,7 +109,7 @@ class Top
         give_format: =>
                 @sorted_stats = @utils.sortStats @stats, @config.exclude
                 console.log "sorted_stats"
-                console.log @sorted_stats 
+                console.log @sorted_stats
                 fs.writeFileSync(@output_dir+"/data/user-data-"+@city+".json"
                         , JSON.stringify(@sorted_stats))
                 @utils.to_csv( @sorted_stats, @output_dir+"/data/user-data-"+@city+".csv")
@@ -123,15 +124,32 @@ class Top
                 i=1
                 for user in @sorted_stats
                         user.lugar = i++
+                        k=1
+                        for old_data in utils_node.data
+                          if(old_data['login']==user.login)
+                            break
+                          k++
+
+                        if(k>user.lugar)#Up
+                          user.change="up"
+
+                        else if(k<user.lugar)#Down
+                          user.change="down"
+
+                        else #Equal
+                          user.change="equal"
+
                         data.usuarios.push( user )
+
+
                 fs.writeFileSync(@output_dir+"/formatted/top-"+@city+".md"
                         , @renderer.render(@layout, data) )
                 @sorted_stats
 
         # Obtains the API requests
-        get_urls: => 
+        get_urls: =>
                 urls=[]
-                if ( !@big ) 
+                if ( !@big )
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
@@ -170,7 +188,7 @@ class Top
 
                                 urls=urls.concat(urls_less)
                 urls
-        
+
         # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
                 @renderer = renderer
