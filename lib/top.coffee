@@ -64,7 +64,7 @@ class Top
                 @logins = []
                 @stats = []
                 @sorted_stats = []
-                utils_node.getLast(city,id,secret)
+                utils_node.getLast(@city,id,secret)
 
 
         # Retrieves statistics for one user from the web site
