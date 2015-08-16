@@ -1,0 +1,6 @@
+{
+    "output_dir": "../github-country-data",
+    "location": ["Reykjavik","Reykjavík"],
+    "city" : "Reykjavik",
+    "layout": "layout-english.ect"
+}
