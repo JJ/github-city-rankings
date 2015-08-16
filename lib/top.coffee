@@ -125,20 +125,20 @@ class Top
                 i=1
                 for user in @sorted_stats
                         user.lugar = i++
-                        k=1
-                        for old_data in utils_node.data
-                          if(old_data['login']==user.login)
-                            break
-                          k++
+                        if @config.get_last
+                                k=1
+                                for old_data in utils_node.data
+                                  if(old_data['login']==user.login)
+                                    break
+                                  k++
 
-                        if(k>user.lugar)#Up
-                          user.change="up"
+                                if(k>user.lugar)#Up
+                                  user.change="up"
+                                else if(k<user.lugar)#Down
+                                  user.change="down"
 
-                        else if(k<user.lugar)#Down
-                          user.change="down"
-
-                        else #Equal
-                          user.change="equal"
+                                else #Equal
+                                  user.change="equal"
 
                         data.usuarios.push( user )
 
