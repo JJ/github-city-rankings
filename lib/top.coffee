@@ -30,6 +30,7 @@ class Top
                 @utils = new Utils
                 if  fs.existsSync "#{city}.json"
                         @config = JSON.parse fs.readFileSync("#{city}.json",'utf8')
+                        @config.get_last = true
                         @city = @config.city
                         @big = @config.big
                         if @config.cutoff
