@@ -2,7 +2,7 @@
     "output_dir": "../top-github-users-data",
     "city" : "Cantabria",
     "location": ["Santander","Cantabria"],
-     "exclude" : ["Colombia", "UIS", "Industrial", "cucuta"],
+     "exclude" : "(olombia|UIS|Industrial|cucuta)",
     "layout": "layout.ect",
     "max_pages": 5
 }
