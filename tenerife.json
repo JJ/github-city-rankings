@@ -2,5 +2,6 @@
     "output_dir": "../top-github-users-data",
     "location": ["Tenerife","La Laguna"],
     "city" : "Tenerife",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "max_pages": 5
 }
