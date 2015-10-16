@@ -3,6 +3,6 @@
     "city" : "Granada",
     "location": ["Granada","Graná","Baza","Motril","Guadix","Almuñécar","Maracena","Zubia","Armilla","Huétor"],
     "exclude" : "(El|Hills|Ecuador)",
-    "max_pages": 7,
+    "max_pages": 8,
     "layout": "granada.ect"
 }
