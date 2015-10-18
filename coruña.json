@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Coruña",
-    "location": ["Coruña","Santiago de Compostela"],
+    "location": ["Coruña","Santiago de Compostela","Ferrol","Narón","Oleiros","Carballo"],
     "layout": "layout.ect",
-    "max_pages": 3
+    "max_pages": 5
 }
