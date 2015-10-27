@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Granada",
-    "location": ["Granada","Graná","Baza","Motril","Guadix","Almuñécar","Maracena","Zubia","Armilla","Huétor","Pinos del Valle","Churriana de la Vega","Salobreña"],
+    "location": ["Granada","Grenade","Graná","Baza","Motril","Guadix","Almuñécar","Maracena","Zubia","Armilla","Huétor","Pinos del Valle","Churriana de la Vega","Salobreña"],
     "exclude" : "(El|Hills|Ecuador)",
     "max_pages": 8,
     "layout": "granada.ect"
