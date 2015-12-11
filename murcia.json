@@ -4,5 +4,5 @@
     "city" : "Murcia",
     "exclude" : "(Colombia|CO|ndias)",
     "layout": "layout.ect",
-    "max_pages": 3
+    "max_pages": 4
 }
