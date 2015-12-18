@@ -87,6 +87,7 @@ class Top
                 name: byProp('name').text().trim()
                 login: byProp('additionalName').text().trim()
                 location: byProp('homeLocation').text().trim()
+                join_date: $('.join-date').text().trim()
                 language: (/\sin ([\w-+#\s\(\)]+)/.exec(pageDesc)?[1] ? '')
                 gravatar: byProp('image').attr('href').replace(400,64)
                 followers: getFollowers()
@@ -148,7 +149,7 @@ class Top
                         , @renderer.render(@layout, data) )
                 @sorted_stats
 
-        # Obtains the API requests
+        # Does the API requests
         get_urls: =>
                 urls=[]
                 if ( !@big )
