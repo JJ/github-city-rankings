@@ -1,0 +1,7 @@
+{
+    "output_dir": "../top-github-users-data",
+    "location": ["Albacete","Hellín","Villarobledo"],
+    "city" : "Albacete",
+    "layout": "layout.ect",
+    "max_pages": 2
+}
