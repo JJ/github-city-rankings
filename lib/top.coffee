@@ -5,6 +5,7 @@ fs = require 'fs'
 
 DISQUALIFIED = [
         'rankingfaker' #good try, buster
+        'Pablo-Merino' #github graffiti
         'andresgsaravia' #from Mexico
         'oscaruhp' #Mexico
         'ArianCastillo' #Mexico
