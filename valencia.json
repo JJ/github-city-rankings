@@ -2,5 +2,7 @@
     "output_dir": "../top-github-users-data",
     "city" : "Valencia",
     "exclude" : "(Venez|CA|VE|Ca|PA)",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "cutoff" : [5,3,2,1,[0,2,"2014-01-01"]],
+    "big" : true
 }
