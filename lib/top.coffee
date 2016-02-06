@@ -195,25 +195,29 @@ class Top
         
         # Does the API requests
         get_urls: =>
-                console.log @dates
                 urls=[]
                 if ( !@big )
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
                         if ( !@dates )
-                                urls = urls.concat big_urls()
+                                urls = urls.concat @big_urls()
                         else
-                                if ( @config.dates.length == 1 ) 
-                                        date_ranges= [ "created:\"* .. #{@config.dates[0]}\"","created:\"#{@config.dates[0]} .. * \""]
+                                console.log @dates
+                                len =  @dates.length
+                                if ( len == 1 ) 
+                                        date_ranges= [ "created:\"* .. #{@dates[0]}\"","created:\"#{@dates[0]} .. * \""]
                                 else
                                         i=0
-                                        date_ranges= for date in @config.dates
-                                                if ( date == @config.dates[0] )
-                                                        date_ranges.push( "created:\"* .. #{@date}\" " )
-                                                else if ( date == @config.dates[-1] )
-                                                        date_ranges.push( "created:\"#{@date} .. *\" " )
+                                        date_ranges = []
+                                        for date in @dates
+                                                if ( date == @dates[0] )
+                                                        date_ranges.push( "created:\"* .. #{date}\" " )
+                                                else if ( i + 1  ==  len  )
+                                                        date_ranges.push( "created:\"#{date} .. *\" " )
                                                 else
-                                                        date_ranges.push( "created:\* #{@config.date[i-1]}..#{date}\"" )
+                                                        date_ranges.push( "created:\" #{@dates[i-1]}..#{date}\"" )
+                                                i++
+
                                                         
                                 date_urls = date_ranges.map ( date ) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+#{date}"
                                 for du in date_urls 
@@ -240,8 +244,5 @@ class Top
                                 utils_node.batchGet urls, this.add_stars, this.give_format
 
        
-
-
-
 
 module.exports = Top
