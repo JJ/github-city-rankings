@@ -52,6 +52,9 @@ class Top
                         else
                                 @max_pages = MAX_PAGES
 
+                        if @config.dates
+                                @dates = @config.dates
+
                 else
                         @config = JSON.parse fs.readFileSync('config.json','utf8')
                         @city = city
@@ -150,48 +153,75 @@ class Top
                         , @renderer.render(@layout, data) )
                 @sorted_stats
 
+        # Get URLs for big. Probably deprecated...
+        big_urls: =>
+                urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
+                for i in [1..@cutoff.length-1] by 1
+                        # this is a big hack. Someone will have to fix it.
+                        max_range = min_range = -1
+                        urls_less = []
+                        if typeof @cutoff[i] isnt 'number'
+                                max_range = min_range = @cutoff[i][0]
+                                repo_cutoff = @cutoff[i][1]
+                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3E#{repo_cutoff}&per_page=100&page=#{page}"
+                                if !@cutoff[i][2]
+                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
+                                else
+                                        if typeof @cutoff[i][2] isnt 'string'
+                                                date_range =  @cutoff[i][2]
+                                                console.log date_range
+                                                old_date = date_range[0]
+                                                mid_old_date = date_range[1]
+                                                mid_date = date_range[2]
+                                                mid_new_date = date_range[3]
+                                                new_date = date_range[4]
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3C#{old_date}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3E#{new_date}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{old_date}..#{mid_old_date}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_old_date}..#{mid_date}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_date}..#{mid_new_date}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_new_date}..#{new_date}&per_page=100&page=#{page}" )
+                                        else
+                                                date_cutoff=@cutoff[i][2]
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3E#{date_cutoff}&per_page=100&page=#{page}" )
+                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3C%3D#{date_cutoff}&per_page=100&page=#{page}" )
+                        else
+                                max_range = @cutoff[i-1]-1
+                                min_range = @cutoff[i]
+                                urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
+
+                urls=urls.concat(urls_less)
+                
+        
         # Does the API requests
         get_urls: =>
+                console.log @dates
                 urls=[]
                 if ( !@big )
                         urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user&per_page=100&page=#{page}"
                 else
-                        urls = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:%3E#{@cutoff[0]}&per_page=100&page=#{page}"
-                        for i in [1..@cutoff.length-1] by 1
-                                max_range = min_range = -1
-                                urls_less = []
-                                if typeof @cutoff[i] isnt 'number'
-                                        max_range = min_range = @cutoff[i][0]
-                                        repo_cutoff = @cutoff[i][1]
-                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3E#{repo_cutoff}&per_page=100&page=#{page}"
-                                        if !@cutoff[i][2]
-                                                urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}&per_page=100&page=#{page}" )
-                                        else
-                                                if typeof @cutoff[i][2] isnt 'string'
-                                                        date_range =  @cutoff[i][2]
-                                                        console.log date_range
-                                                        old_date = date_range[0]
-                                                        mid_old_date = date_range[1]
-                                                        mid_date = date_range[2]
-                                                        mid_new_date = date_range[3]
-                                                        new_date = date_range[4]
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3C#{old_date}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3E#{new_date}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{old_date}..#{mid_old_date}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_old_date}..#{mid_date}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_date}..#{mid_new_date}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:#{mid_new_date}..#{new_date}&per_page=100&page=#{page}" )
-                                                else
-                                                        date_cutoff=@cutoff[i][2]
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3E#{date_cutoff}&per_page=100&page=#{page}" )
-                                                        urls_less = urls_less.concat( utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:repositories+type:user+followers:#{min_range}..#{max_range}+repos:%3C%3D#{repo_cutoff}+created:%3C%3D#{date_cutoff}&per_page=100&page=#{page}" )
+                        if ( !@dates )
+                                urls = urls.concat big_urls()
+                        else
+                                if ( @config.dates.length == 1 ) 
+                                        date_ranges= [ "created:\"* .. #{@config.dates[0]}\"","created:\"#{@config.dates[0]} .. * \""]
                                 else
-                                        max_range = @cutoff[i-1]-1
-                                        min_range = @cutoff[i]
-                                        urls_less = utils_node.range(1, @max_pages + 1).map (page) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+followers:#{min_range}..#{max_range}&per_page=100&page=#{page}"
+                                        i=0
+                                        date_ranges= for date in @config.dates
+                                                if ( date == @config.dates[0] )
+                                                        date_ranges.push( "created:\"* .. #{@date}\" " )
+                                                else if ( date == @config.dates[-1] )
+                                                        date_ranges.push( "created:\"#{@date} .. *\" " )
+                                                else
+                                                        date_ranges.push( "created:\* #{@config.date[i-1]}..#{date}\"" )
+                                                        
+                                date_urls = date_ranges.map ( date ) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+#{date}"
+                                for du in date_urls 
+                                        urls = urls.concat utils_node.range(1, @max_pages + 1).map (page) => "#{du}&per_page=100&page=#{page}"
 
-                                urls=urls.concat(urls_less)
+                console.log urls 
                 urls
+
 
         # Retrieves logins and puts everything else in motion
         get_logins: ( renderer ) =>
@@ -209,6 +239,7 @@ class Top
                                 urls = @logins.map (login) -> "https://github.com/#{login}?tab=repositories"
                                 utils_node.batchGet urls, this.add_stars, this.give_format
 
+       
 
 
 
