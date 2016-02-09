@@ -212,11 +212,11 @@ class Top
                                         for date in @dates
                                                 if ( date == @dates[0] )
                                                         date_ranges.push( "created:\"* .. #{date}\" " )
-                                                else if ( i + 1  ==  len  )
-                                                        date_ranges.push( "created:\"#{date} .. *\" " )
                                                 else
                                                         date_ranges.push( "created:\" #{@dates[i-1]}..#{date}\"" )
                                                 i++
+                                                if ( i  is  len  ) # Last one
+                                                        date_ranges.push( "created:\"#{date} .. *\" " )
 
                                                         
                                 date_urls = date_ranges.map ( date ) => "https://api.github.com/search/users?client_id=#{@id}&client_secret=#{@secret}&q="+@location+"+sort:followers+type:user+#{date}"
