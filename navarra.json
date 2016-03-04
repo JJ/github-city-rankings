@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Navarra",
-    "location": ["Navarra","Nafarroa","Pamplona","Iruña"],
+    "location": ["Navarra","Nafarroa","Pamplona","Iruña","Iruñea"],
     "layout": "layout.ect",
     "max_pages": 2
 }
