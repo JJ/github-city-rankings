@@ -3,6 +3,6 @@
     "city" : "Valencia",
     "exclude" : "(Venez|CA|VE|Ca|PA)",
     "layout": "layout.ect",
-    "dates": [ "2014-01-01" ],
+    "dates": [ "2014-01-01","2015-01-01" ],
     "big" : true
 }

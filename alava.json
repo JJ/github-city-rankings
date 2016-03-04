@@ -3,5 +3,6 @@
     "city" : "Álava",
     "location": ["Álava","Araba","Vitoria","Gasteiz"],
     "exclude" : "(Bra|ES|es|Saudi)",
+    "max_pages": 2,
     "layout": "layout.ect"
 }

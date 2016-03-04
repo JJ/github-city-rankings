@@ -3,6 +3,6 @@
     "location": ["Palmas","Gran Canaria"],
     "city" : "Las Palmas",
     "exclude" : "Bra",
-    "max_pages": 3,
+    "max_pages": 4,
     "layout": "layout.ect"
 }

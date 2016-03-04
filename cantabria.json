@@ -4,5 +4,5 @@
     "location": ["Santander","Cantabria"],
      "exclude" : "(olombia|UIS|Industrial|cucuta)",
     "layout": "layout.ect",
-    "max_pages": 5
+    "max_pages": 4
 }

@@ -1,6 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Castellón","Castelló","Burriana","Vall de Uxó","Vinaroz","Benicarló", "Almazora", "Villareal","Benicasim"],
+    "location": ["Castellón","Castelló","Castellon","Castello","Burriana","Vall de Uxó","Vall de Uxo","Vinaroz","Benicarló", "Benicarlo","Almazora", "Villareal","Benicasim"],
     "city" : "Castellón",
     "layout": "layout.ect",
     "max_pages": 5

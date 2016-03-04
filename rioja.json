@@ -3,5 +3,6 @@
     "city" : "Rioja",
     "location": ["Logroño","Rioja"],
     "exclude" : "Argenti",
-    "layout": "layout.ect"
+    "layout": "layout.ect",
+    "max_pages": 2
 }

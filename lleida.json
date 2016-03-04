@@ -1,6 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
     "city" : "Lleida",
-    "location": ["Lleida","Lérida"],
-    "layout": "layout.ect"
+    "location": ["Lleida","Lérida","Lerida","Tremp","Balaguer","Seo de Urgel","La Seu d'Urgell"],
+    "layout": "layout.ect",
+    "max_pages": 2
 }
