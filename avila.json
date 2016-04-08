@@ -1,7 +1,8 @@
 {
     "output_dir": "../top-github-users-data",
+    "location": ["Ávila","Avila"],
+    "exclude" : "(iego|innip|Cuba)",
     "city" : "Ávila",
     "max_pages": 1,
-    "exclude" : "Mich",
     "layout": "layout.ect"
 }
