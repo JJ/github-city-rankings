@@ -4,5 +4,4 @@
     "city" : "Córdoba",
     "exclude" : "(rgenti|rgenet|Cuarto|AR|Cap|Vera)",
     "layout": "cordoba.ect",
-    "max_pages": 9
 }
