@@ -1,5 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
+    "location": ["Madrid","Alcalá de Henares","Alcorcón","Getafe","Leganés","Móstoles","Fuenlabrada","Torrejón de Ardoz","Parla", "Alcobendas","Las Rozas","Coslada","San Sebastián de los Reyes","Pozuelo de Alarcón","Rivas-Vaciamadrid","Valdemoro","Majadahonda","Collado Villalba","Aranjuez","Arganda del Rey"],
     "city" : "Madrid",
     "layout": "layout.ect",
     "dates": [ "2011-01-01","2012-01-01","2013-01-01","2013-06-01","2014-01-01","2014-06-01","2015-01-01","2015-06-01","2016-01-01" ],

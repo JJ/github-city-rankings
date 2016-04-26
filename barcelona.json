@@ -1,5 +1,6 @@
 {
     "output_dir": "../top-github-users-data",
+    "location": ["Barcelona","Hospitalet de Llobregat","Badalona","Tarrasa","Terrassa","Sabadell", "Santa Coloma de Gramanet","Mataró","Cugar del Vallés","Cornellá de Llobregat","Manresa","Rubí","Viladecans","El Prat de Llobregat","Granollers"],
     "city" : "Barcelona",
     "layout": "layout.ect",
     "dates": [ "2011-01-01","2012-01-01","2013-01-01","2013-06-01","2014-01-01","2014-06-01","2015-01-01","2016-01-01" ],
