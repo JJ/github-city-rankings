@@ -17,6 +17,9 @@ DISQUALIFIED = [
   'funkenstein'   # Appears in the list even though he has 30 followers (bug).
   'scottgonzalez' # Contribution graffiti.
   'beberlei' # 1.7K contribs every day
+  'loverajoel' # Argentina
+  'leliel12' #Argentina
+  'mdottavio' #Argentina
 ]
 
 MAX_PAGES = 10

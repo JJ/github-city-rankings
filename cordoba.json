@@ -1,7 +1,7 @@
 {
     "output_dir": "../top-github-users-data",
-    "location": ["Córdoba","Cordoba"],
+    "location": ["Córdoba","Cordoba","Lucena","Puente Genil","Montilla","Priego de Córdoba","Palma del Río"],
     "city" : "Córdoba",
     "exclude" : "(rgenti|rgenet|Cuarto|AR|Cap|Vera)",
-    "layout": "cordoba.ect",
+    "layout": "cordoba.ect"
 }
