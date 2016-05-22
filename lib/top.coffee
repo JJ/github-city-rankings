@@ -88,7 +88,12 @@ class Top
             (parseFloat text) * multiplier
 
           pageDesc = $('meta[name="description"]').attr('content')
-
+#          console.log( $('meta[name="twitter:title"]').attr('content') )
+#          console.log( $('.boxed-group > h3 ') )
+          contributions = $('.boxed-group > h3 ').toArray().pop()
+#          console.log(contributions)
+          theseContributions = /(\S+)\s+contribution/.exec(contributions.children[0].data)
+#          console.log(theseContributions)
           # compute stats
           userStats =
                 name: byProp('name').text().trim()
@@ -101,12 +106,13 @@ class Top
                 user_stars: $('.vcard-stats > a:nth-child(2) > .vcard-stat-count').text().trim()
                 stars : 0
                 organizations: $('#site-container > div > div > div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName)
-                contributions: getInt $('#contributions-calendar > div:nth-child(3) > span.contrib-number').text()
-                contributionsStreak: getInt $('#contributions-calendar > div:nth-child(4) > span.contrib-number').text()
-                contributionsCurrentStreak: getInt $('#contributions-calendar > div:nth-child(5) > span.contrib-number').text()
+                contributions: getInt theseContributions[1]
+#                contributionsStreak: getInt $('#contributions-calendar > div:nth-child(4) > span.contrib-number').text()
+#                contributionsCurrentStreak: getInt $('#contributions-calendar > div:nth-child(5) > span.contrib-number').text()
           userStats.location = userStats.location.replace(/\;/g,",")
           userStats.location = userStats.location.replace(/\|/g,",")
           @stats[userStats.login] = userStats
+          console.log(userStats)
           userStats
 
         add_stars: (html) =>
