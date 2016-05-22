@@ -94,6 +94,7 @@ class Top
 #          console.log(contributions)
           theseContributions = /(\S+)\s+contribution/.exec(contributions.children[0].data)
 #          console.log(theseContributions)
+#          console.log( $('div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName) )
           # compute stats
           userStats =
                 name: byProp('name').text().trim()
@@ -105,7 +106,7 @@ class Top
                 followers: getFollowers()
                 user_stars: $('.vcard-stats > a:nth-child(2) > .vcard-stat-count').text().trim()
                 stars : 0
-                organizations: $('#site-container > div > div > div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName)
+                organizations: $('div.column.one-fourth.vcard > div.clearfix > a').toArray().map(getOrgName)
                 contributions: getInt theseContributions[1]
 #                contributionsStreak: getInt $('#contributions-calendar > div:nth-child(4) > span.contrib-number').text()
 #                contributionsCurrentStreak: getInt $('#contributions-calendar > div:nth-child(5) > span.contrib-number').text()
