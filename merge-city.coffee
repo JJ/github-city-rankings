@@ -43,6 +43,22 @@ glob '../top-github-users-data/data/user-data-*.json', {}, ( error, files ) =>
         i=1
         for user in users[0..999]
                 user.lugar = i++
+                
+                if @config.get_last
+                                k=1
+                                for old_data in utils_node.data
+                                  if(old_data['login']==user.login)
+                                    break
+                                  k++
+
+                                if(k>user.lugar)#Up
+                                  user.change="up"
+                                else if(k<user.lugar)#Down
+                                  user.change="down"
+
+                                else #Equal
+                                  user.change="equal"
+                                  
                 data.usuarios.push( user )
 
         fs.writeFileSync "../top-github-users-data/formatted/top-alt-Spain.md", renderer.render( layout, data )
