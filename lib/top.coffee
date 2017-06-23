@@ -253,6 +253,19 @@ class Top
                                 urls = @logins.map (login) -> "https://github.com/#{login}?tab=repositories"
                                 utils_node.batchGet urls, this.add_stars, this.give_format
 
+        # Retrieves logins and puts everything else in motion
+        get_users: =>
+                urls = @get_urls()
+                parse = (text) =>
+                        JSON.parse(text).items.map (_) -> _.login
+
+                utils_node.batchGet urls, parse, (all) =>
+                        logins = [].concat.apply [], all
+                        @logins = logins.filter (name) ->
+                              name not in DISQUALIFIED
+                        urls = @logins.map (login) -> "[#{login}](https://github.com/#{login})"
+                        console.log urls.join("\n");
+
        
 
 module.exports = Top
