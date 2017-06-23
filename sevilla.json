@@ -3,5 +3,7 @@
     "location": ["Sevilla","Seville","Alcalá de Guadaira","Utrera","Mairena del Aljarafe", "Écija", "Dos Hermanas"],
     "city" : "Sevilla",
     "exclude" : "(México|Oax)",
+    "dates": [ "2014-01-01","2016-01-01" ],
+    "big" : true,
     "layout": "layout.ect"
 }

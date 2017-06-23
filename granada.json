@@ -3,5 +3,7 @@
     "city" : "Granada",
     "location": ["Granada","Grenade","Graná","Baza","Motril","Guadix","Almuñécar","Maracena","Zubia","Armilla","Huétor","Pinos del Valle","Churriana de la Vega","Salobreña","Las Gabias", "Albolote","Atarfe","Ogíjares"],
     "exclude" : "(El|Hills|Ecuador)",
+    "big" : true,
+    "dates": [ "2014-01-01","2016-01-01" ],
     "layout": "granada.ect"
 }
